@@ -1,6 +1,0 @@
-DNS  - Domain Name Server
-HTML - HyperText Markup Language
-CSS  - Cascading StyleSheet
-JS   - JavaScript
-
-Fullstack = FrontEnd + BackEnd
