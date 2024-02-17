@@ -1,0 +1,107 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Upper Div Styling */
+.upper-div{
+    display: flex;
+    height: 70vh;
+    background-color:rgb(254, 209, 155);
+}
+
+.upper-left-div{
+    width: 50vw;
+    margin: 20px 0px 50px 120px;
+}
+
+.upper-right-div{
+    width: 50vw;
+}
+
+h1{
+    width: 600px;
+    font-size: 40px;
+}
+
+#para-1{
+    width: 500px;
+    font-size: 25px;
+}
+
+#para-2{
+    width: 300px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+#para-3{
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.email-main-div{
+    display: flex;
+}
+
+input{
+    border: 2px solid black;
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+#register-btn{
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+img{
+    height: 450px;
+}
+
+.img-div{
+    margin-top: 40px;
+    margin-left: 150px;
+}
+
+
+/* Lower Div Styling */
+.lower-div{
+    height: 30vh;
+    display: flex;
+    background-color: black;
+    color: white;
+}
+
+.lower-left-div{
+    margin: 40px 0px 0px 140px;
+    width: 50vw;
+}
+
+ul>li{
+    list-style-type: none;
+    color: white;
+    margin-top: 5px;
+}
+
+.lower-right-div{
+    text-align: end;
+    margin: 40px 0px 0px 190px;
+}
+
+
+/* linkedin-Instagram logo */
+ul img{
+    height: auto;
+}
