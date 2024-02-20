@@ -1,0 +1,30 @@
+# Image Tag:
+    -img
+        - src=""
+        - alt=""
+        - width=""
+        - height=""
+Command: <img src="image.webp" alt="developer-image">
+
+
+# Video Tag:
+    - video
+        - Attribute: controls
+Command:     <video src="video.mp4" controls></video>
+
+
+# Audio Tag:
+    - audio
+        - Attribute: controls
+Command:    <audio src="audio.mp3" controls></audio>
+
+
+# Favicon icon:
+Command:     <link rel="icon" href="googleicon.png">
+
+
+# Special Characters:
+
+&nbsp;  - add blank space
+&lt;    - add '<'
+&gt;    - add '>'

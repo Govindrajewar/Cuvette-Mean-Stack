@@ -1,0 +1,44 @@
+# Tables:
+    - table
+        - tr
+            - colspan=""
+            - rowspan=""
+        - th
+        - td
+
+# HTML Forms:
+    > Attributes:
+        - required
+        - readonly
+        - disabled
+        - placeholder=""
+
+    - form>
+        - input>
+            - type=""
+                - text
+                - password
+                - number
+                - email
+                - radio
+                - checkbox
+                - color
+                - date
+                - time
+                - file
+
+        - button>
+            - type=""
+                - button
+                - reset
+                - submit
+
+        - select
+            Attributes: selected
+            - option1
+            - option2
+
+        - textarea
+            - rows=""
+            - cols=""
+

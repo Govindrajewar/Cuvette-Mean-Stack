@@ -1,0 +1,47 @@
+Note: Last 30 min are nothing.
+
+HTML: HyperText Markup Language
+Refer: https://www.w3schools.com/html/default.asp
+
+# HTML Boiler Plate:
+<html>
+    <head>
+        <title>HTML Boiler Plate</title>
+    </head>
+    <body>
+        // body content
+    </body>
+</html>
+
+# Shortcut to create HTML Boiler Plate:
+shift + ! => hit Enter
+
+
+# Two types of tags:
+1. Singleton tags:
+eg., br
+
+2. Paired tags:
+eg., h1, p
+
+
+# Tags:
+- Heading:
+    - h1, h2, h3, h4, h5, h6
+
+- Paragraph:
+    - p
+
+- Line Break:
+    br
+
+- Image:
+    - img
+        - src
+        - width
+        - height
+
+- Anchor (link):
+    - a
+        - href
+        - target (_blank, _self, _parent)

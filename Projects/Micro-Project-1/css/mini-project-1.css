@@ -7,7 +7,7 @@ body{
 /* Upper Div Styling */
 .upper-div{
     display: flex;
-    height: 70vh;
+    /* height: 70vh; */
     background-color:rgb(254, 209, 155);
 }
 
@@ -78,14 +78,14 @@ img{
 
 /* Lower Div Styling */
 .lower-div{
-    height: 30vh;
+    /* height: 30vh; */
     display: flex;
     background-color: black;
     color: white;
 }
 
 .lower-left-div{
-    margin: 40px 0px 0px 140px;
+    margin: 13px 0px 0px 140px;
     width: 50vw;
 }
 
@@ -97,7 +97,7 @@ ul>li{
 
 .lower-right-div{
     text-align: end;
-    margin: 40px 0px 0px 190px;
+    margin: 13px 0px 0px 190px;
 }
 
 

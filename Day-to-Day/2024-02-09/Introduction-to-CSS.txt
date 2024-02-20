@@ -1,0 +1,56 @@
+CSS : Cascading Style Sheet
+
+# 3 Types of CSS Styling:
+
+1. Inline Style
+eg.,
+    <h1 style="background-color: blue; color: white; text-align: center;">CSS Basics</h1>
+
+2. Internal Style
+eg.,
+<style>
+    h2{
+        background-color: blue;
+        color: white;
+        padding: 10px;
+    }
+</style>
+
+3. External Style
+eg.,
+    <link rel="stylesheet" href="css-basics.css">
+
+
+# Types of Selectors:
+
+> Element Selector:
+eg.,
+    h2{
+        background-color: blue;
+        color: white;
+        padding: 10px;
+    }
+
+
+> Group Selector:
+eg.,
+table, tr, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+
+> Class Selector:
+eg.,
+    .btn-class{
+        font-family: cursive;
+    }
+
+
+> Id Selector:
+eg.,
+    #img-div{
+        text-align: center;
+    }

@@ -1,0 +1,15 @@
+table, tr, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn-class{
+    font-family: cursive;
+    background-color: aquamarine;
+}
+
+#img-div{
+    text-align: center;
+}

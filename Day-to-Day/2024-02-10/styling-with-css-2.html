@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styling-with-css-2</title>
+    <link rel="stylesheet" href="styling-with-css.css">
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+
+        #main{
+            border: 2px dotted red;
+            height: 400px;
+            width: 400px;
+
+            /* position: absolute;
+            top: 100px;
+            left: 250px; */
+        }
+
+        #child{
+            border: 2px solid black;
+            height: 200px;
+            width: 200px;
+
+            /* position: relative; */
+            position: fixed;
+            top: 350px;
+            left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>border</h1>
+    <div class="container">
+        <div id="box1" class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ab! Quo, aliquam omnis doloribus sed et dolorem tempora maiores esse quos, similique, doloremque deserunt voluptas!</div>
+        <div id="box2" class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, omnis. Repudiandae unde quibusdam amet quae sed, quas inventore iste itaque pariatur porro blanditiis aut nam.</div>
+        <div id="box3" class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi recusandae voluptates a sed doloribus molestias, officiis commodi eum inventore voluptas! Mollitia consequatur eos reiciendis nostrum?</div>
+    </div>
+
+
+    <h1>position</h1>
+    <div id="main">
+        <div id="child">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, molestiae itaque iusto ad quos possimus excepturi ea sed molestias aut saepe ratione, fuga minima perspiciatis!
+        </div>
+    </div>
+
+</body>
+
+</html>

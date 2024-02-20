@@ -1,0 +1,2 @@
+Bug     - Any problem that is encountered in the code.
+Debug   - The process of fixing the bug.

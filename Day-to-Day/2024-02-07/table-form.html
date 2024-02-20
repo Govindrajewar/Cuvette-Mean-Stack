@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table & Form</title>
+
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Table</h1>
+    <h2>Basic Table</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Class</th>
+        </tr>
+        <tr>
+            <td>Abhi</td>
+            <td>95</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Raj</td>
+            <td>75</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+    <h2>rowspan / colspan</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Class</th>
+            <th>Favorite Color</th>
+            <th>Favorite Fruit</th>
+        </tr>
+        <tr>
+            <td>Abhi</td>
+            <td>95</td>
+            <td rowspan="2">8</td>
+            <td>Red</td>
+            <td>Apple</td>
+        </tr>
+        <tr>
+            <td>Rahul</td>
+            <td>85</td>
+            <td colspan="2">Orange</td>
+        </tr>
+        <tr>
+            <td>Raj</td>
+            <td>75</td>
+            <td>9</td>
+            <td>Green</td>
+            <td>Guava</td>
+        </tr>
+    </table>
+    <br><br>
+
+    <h1>Form</h1>
+    <form action="">
+        <br> Name: <input type="text" value="Abhi Rajewar" readonly>
+        <br> Password: <input type="password" required>
+        <br> email: <input type="email" placeholder="Enter your email">
+        <br> Age: <input type="number">
+        <br> Gender: <input type="radio" name="gender" id=""> Male
+        <input type="radio" name="gender" id=""> Female
+        <br> Favorite Fruit: <input type="checkbox" name="" id=""> Apple
+        <input type="checkbox" name="" id=""> Guava
+        <input type="checkbox" name="" id=""> Pineapple
+        <input type="checkbox" name="" id=""> orange
+        <br> Select color: <input type="color" name="" id="" disabled>
+        <br> Favorite Team:
+        <select>
+            <option value="csk" selected>CSK</option>
+            <option value="mi">MI</option>
+            <option value="rcb">RCB</option>
+            <option value="srh">SRH</option>
+        </select>
+        <br> Date: <input type="date" name="" id="">
+        <br> Time: <input type="time" name="" id="">
+        <br> Select File: <input type="file" name="" id="">
+        <br> Give Suggestions (if any):
+        <br> <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br><br>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+
+    <br><br>
+</body>
+
+</html>

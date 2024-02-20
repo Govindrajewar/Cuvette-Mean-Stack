@@ -1,0 +1,39 @@
+# Block Level Elements: The elements which takes the 100% width of the viewport are called block Level elements.
+eg., p, h1, div
+
+# Inline Elements: The elements which takes only width which is required is called inline elements.
+eg., a, br, img
+
+
+# Sematic Tags:
+<header></header>
+<main></main>
+<footer></footer>
+
+
+# Lists:
+There are two types of Lists.
+1. Ordered Lists
+type = "1, A, a"
+
+template:
+<ol type="">
+    <li></li>
+    <li></li>
+</ol>
+
+
+2. Unordered Lists
+type = "disc, circle, square"
+
+template:
+<ul type="">
+    <li></li>
+    <li></li>
+</ul>
+
+
+# Add internal links:
+
+<a href="#element-id"> click </a>
+<div id="element-id"> data </div>
