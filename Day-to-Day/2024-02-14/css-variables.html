@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+
+:root{
+    --primary-color: red;
+    --secondary-color: rgb(15, 227, 8);
+}
+
+        h1{
+            color: red;
+        }
+
+        h2{
+            /* color: red; */
+            color: var(--primary-color);
+        }
+
+        p{
+            color:var(--secondary-color);
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1> Main Header</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, praesentium id a reiciendis, vero nostrum, facere obcaecati voluptatem aperiam unde similique? Ab delectus autem suscipit officiis soluta fuga amet obcaecati totam ratione cumque, porro earum distinctio modi accusantium sequi quos dignissimos recusandae eveniet nemo? Autem assumenda cupiditate adipisci ad nostrum.</p>
+    <h2>Sub Header</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae aliquam neque aliquid eveniet natus unde non, dolorem iste obcaecati, odio facilis possimus esse optio asperiores accusamus. Labore, illum? Aspernatur enim similique, iure fuga facere delectus, voluptas excepturi neque culpa illo dolorum molestias eligendi modi assumenda cupiditate ex. Ipsum, aut. Assumenda.</p>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Responsive Design:
+Refer: https://www.w3schools.com/css/css_rwd_intro.asp
+
+# Media Queries:
+eg 1.,
+        @media screen and (min-width:500px) {
+            #myDiv {
+                background-color: yellow;
+                height: 200px;
+                width: 200px;
+            }
+        }
+
+eg 2.,
+        @media screen and (min-width:600px) and (max-width:800px) {
+            #myDiv {
+                background-color: green;
+                height: 300px;
+                width: 300px;
+            }
+        }

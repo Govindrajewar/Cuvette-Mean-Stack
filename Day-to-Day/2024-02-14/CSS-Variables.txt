@@ -1,0 +1,11 @@
+CSS Variables:
+Refer: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+
+eg.,
+:root {
+  --main-bg-color: brown;
+}
+
+h1{
+    color: --main-bg-color;
+}

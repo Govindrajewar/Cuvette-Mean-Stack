@@ -1,0 +1,80 @@
+# Installation of Node.js
+
+# Conditional Statement:
+
+> if else syntax:
+
+if(condition){
+    // body
+} else{
+    // body
+}
+
+
+# Loops:
+
+> while Loop syntax:
+
+while(condition){
+    // body
+}
+
+
+> for Loop syntax:
+
+for(initialization ; condition ; increment/decrement){
+    // body
+}
+
+
+> do-while Loop syntax:
+
+do{
+    // body
+
+} while(condition);
+
+
+# Ternary Operator:
+
+syntax: condition ; (true) ? (false)
+
+
+# Function: a block of code which can be execute after calling it.
+
+Type 1:
+        function sayHello(){
+            console.log("sayHello function evoked");
+        }
+
+        sayHello();
+
+
+Type 2: Anonymous Function:
+        var anonymousFunction = function (){
+            console.log("Anonymous Function evoked");
+        }
+
+        anonymousFunction();
+
+
+Type 3: Nested Function:
+        function abc(){
+            console.log("ABC");
+
+            function def(){
+                console.log("DEF");
+            }
+            def();
+        }
+
+        abc();
+
+
+Type 4: Parameterized function:
+        var sum = function (a, b){
+            console.log(a+b);
+        }
+
+        sum(7,10);
+

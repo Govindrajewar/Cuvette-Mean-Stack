@@ -1,0 +1,71 @@
+# Ways to add JavaScript to HTML:
+1. Internal - inside body/head using (<script></script>)
+2. External - Script tag (external.js file)
+
+
+# Datatypes in JavaScript:
+- Primitive:
+    - number
+    - string
+    - boolean
+    - undefined
+    - null
+
+- Non-Primitive:
+    - object
+
+
+# Variable:
+> Declaration:
+Command: var x;
+
+> Assignment:
+Command: x = 10;
+
+> Initialization:
+Command: var x = 10;
+
+
+# Check type of Variable:
+Command: typeOf(x);
+
+
+# Operators:
+> Arithmetic Operators:
+    +
+    -
+    /
+    x
+    %
+
+> Comparison Operators:
+    >
+    <
+    >=
+    <=
+    ==
+    !=
+
+> Logical Operators:
+    &&
+    ||
+    !
+
+
+# Conditional Statement:
+
+> if else:
+    if(condition){
+
+    } else{
+
+    }
+
+
+# DOM Overview:
+
+Command 1:
+document.getElementbyID('element-id').innerText = 'Updated Text';
+
+Command 2:
+document.getElementbyID('element-id').innerHTML = '<h1> New Header </h1>';

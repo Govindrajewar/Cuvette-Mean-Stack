@@ -1,0 +1,33 @@
+VCS - Version Control System
+
+> GIT       - is Software
+> GitHub    - is platform
+
+- The code that you want to share, backup, deploy, maintain a version of it.
+
+* View git version
+> git --version
+
+* Initialize a git repository
+> git init
+
+* View branch list
+> git branch
+
+* Make a new branch
+> git branch <branch-name>
+
+* Switch to another branch
+> git switch <branch-name>
+
+* Create & Switch to branch
+> git checkout <branch-name>
+
+* Add files to git
+> git add <file-name>
+
+* Commit version of branch
+> git commit -a -m"add-message"
+
+* Pushing code to GitHub
+> git push

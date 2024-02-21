@@ -1,0 +1,30 @@
+# Flex:
+Refer: https://www.w3schools.com/css/css3_flexbox_container.asp
+
+display: flex;
+
+flex-wrap: nowrap; (default)
+         : wrap;
+         : wrap-reverse;
+
+flex-direction: row; (default)
+              : column;
+              : row-reverse;
+              : column-reverse;
+
+justify-content : start  (default)
+                : center;
+                : end;
+                : space-around;
+                : space-between;
+                : space-evenly;
+
+align-items: center;
+           : end;
+
+
+
+# Grid:
+Refer: https://www.w3schools.com/css/css_grid.asp
+
+display: grid;

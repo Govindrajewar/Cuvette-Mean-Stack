@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        #myDiv {
+            border: 1px solid black;
+            height: 150px;
+            width: 150px;
+            background-color: aqua;
+        }
+
+        #header {
+            font-size: 30px;
+        }
+
+        @media screen and (min-width:500px) {
+            #myDiv {
+                background-color: yellow;
+                height: 200px;
+                width: 200px;
+            }
+
+            #header {
+                font-size: 50px;
+                color: red;
+            }
+
+        }
+
+        @media screen and (min-width:600px) and (max-width:800px) {
+            #myDiv {
+                background-color: green;
+                height: 300px;
+                width: 300px;
+            }
+
+            #header {
+                font-size: 75px;
+                color: goldenrod;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+
+    <h2 id="header">Header 2</h2>
+
+</body>
+
+</html>

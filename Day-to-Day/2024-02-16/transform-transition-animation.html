@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+
+        body{
+            margin-left: 50px;
+        }
+
+        #div1 {
+            border: 1px dotted red;
+
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+
+            /* transition */
+            transition-property: all;
+            transition-duration: 3s;
+            transition-delay: 0s;
+            transition-timing-function: linear;
+        }
+
+        #div1:hover {
+            background-color: goldenrod;
+            width: 600px;
+            height: 400px;
+        }
+
+        img:hover {
+            height: 300px;
+            transform: rotate(45deg);
+        }
+
+        #div2 {
+            border: 1px dotted red;
+
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+
+            /* Animation */
+            animation-name: demo-animation;
+            animation-delay: 2s;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes demo-animation {
+            0% {
+                background-color: aqua;
+            }
+
+            25% {
+                background-color: green;
+            }
+
+            50% {
+                background-color: purple;
+            }
+
+            75% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: blue;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h2>Transition</h2>
+    <div id="div1"></div>
+
+    <br><br><br><br><br><br><br><br>
+
+    <h2>Transform</h2>
+    <div id="img-div">
+        <img src="pumpkin.webp" alt="punpkin-img" height="200px">
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+
+    <h2>Animation</h2>
+    <div id="div2"></div>
+
+</body>
+
+</html>

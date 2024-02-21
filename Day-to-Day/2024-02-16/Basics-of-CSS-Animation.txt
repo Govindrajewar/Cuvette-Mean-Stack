@@ -1,0 +1,19 @@
+Refer: https://animate.style/
+
+# Transform:
+    - Property:
+    transform: rotate(45deg);
+
+# Transition:
+    - Property:
+    transition-property: all;
+    transition-duration: 3s;
+    transition-delay: 2s;
+    transition-timing-function: linear;
+
+# Animation:
+    - Property:
+    animation-name: demo-animation;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;

@@ -1,0 +1,71 @@
+# Function:
+
+> Declaration:
+    function abc(){
+        console.log("abc");
+    }
+
+> Call (evocation):
+    abc();
+
+
+# Types of Function:
+
+Type 1: Anonymous Function:
+        var anonymousFunction = function (){
+            console.log("Anonymous Function evoked");
+        }
+
+        anonymousFunction();
+
+
+Type 2: Nested Function:
+        function abc(){
+            console.log("ABC");
+
+            function def(){
+                console.log("DEF");
+            }
+            def();
+        }
+
+        abc();
+
+
+# Array:
+- is collection of elements.
+- is always starts with 0th index.
+
+let array1 = [10, 20, 30, 40, 50];
+console.log(array1);
+
+let array2 = ['Abhi', 'Rahul', 'Raj'];
+console.log(array2);
+
+let array3 = [7, 'M. S. Dhoni', true];
+console.log(array3);
+
+
+- Properties:
+    - length
+
+- methods:
+    - push(elements)    // add new element at last of array
+    - pop()             // remove last element of array
+    - sort()            // sort all element of array
+        - ascending (a-b)
+        - descending(b-a)
+    - forEach()         // parse all the elements
+    - map()             // return modified elements
+    - filter()          // return new filtered array
+    - find()            // return 1 element if condition satisfied.
+
+
+# Callbacks:
+
+syntax:
+        abc(
+            function (){
+                console.log("Hello JS");
+            }
+        )
