@@ -1,0 +1,61 @@
+# Objects:
+- datatype where values are stored in key: 'value' format.
+- objects can also be created without using curly brackets {} by using the keyword new Object().
+- objects can have methods associated with them. These methods are functions that are part of the object and can access and modify the data within the object.
+
+eg.,
+var person = {
+    firstName = 'Abhi',
+    lastName = 'Rajewar',
+    age = 25,
+};
+
+console.log(person); // Output will be - {firstName:'Abhi',lastName:'Rajewar',age:25}
+
+// Accessing the value of a property using dot notation (.)
+console.log(person.firstName) // Output will be Abhi
+
+// Accessing the value of a property using square brackets and key name [].
+console.log(person['lastName']) // Output will be Rajewar
+
+
+// Adding new properties to an object
+Way 1: person.email = "abhirj@gmail.com";
+Way 1: person['city'] = "Nanded";
+
+// Way 2: Using the set() method
+person.set('country','India');
+
+// Deleting a property from an object
+// Way 1 : delete person.age;
+
+// Way 2 : Using the removeProperty() method
+person.removeProperty('country');
+
+// Checking if a property exists in an object
+if(person.hasOwnProperty('firstName')){
+   console.log("Yes");
+}else{
+   console.log("No");
+}
+// Getting all the keys/properties present inside an object
+console.log(Object.keys(person)); // Output will be ['firstName', 'lastName', 'email', 'city']
+
+// Checking if an object is empty or not
+if(Object.keys(person).length === 0){
+   console.log("The object is Empty.");
+} else {
+   console.log("The object has some data.")
+}
+
+
+// Deleting a property from an object
+delete person.email;
+
+
+// Check if a property exists or not
+if('email' in person){
+    console.log("Email is present");
+}else{
+    console.log("Email is absent")
+}
