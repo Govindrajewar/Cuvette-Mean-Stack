@@ -1,0 +1,195 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+/* Side Icon */
+.side-icon {
+    position: absolute;
+    right: 100px;
+    top: 140px;
+    height: 200px;
+    width: 25px;
+}
+
+
+/* Navigation Bar */
+.header {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #6F6AF7;
+    color: white;
+    font-size: 20px;
+}
+
+.title {
+    font-size: 50px;
+    font-family: cursive;
+    margin-left: 50px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    padding: 10px;
+    gap: 30px;
+}
+
+#dropdown{
+    font-size: 20px;
+}
+
+.search-div {
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    height: 30px;
+    padding: 10px;
+}
+
+input {
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.icon {
+    margin-right: 50px;
+}
+
+
+/* Main Content */
+.main-content {
+    padding: 10%;
+}
+
+
+/* Content Boxes */
+.content-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Upper Div */
+.box-upper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+
+#code-image {
+    height: 400px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.box-upper-right {
+    background-color: #E5D8FF;
+    color: #6F7373;
+    padding: 30px;
+    font-size: 26px;
+    border-radius: 20px;
+}
+
+
+/* Middle Div */
+.box-middle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+
+.box-middle-item {
+    width: 20%;
+    height: 80px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box-1 { background-color: #929DFF; color: white; }
+.box-2 { background-color: #734CF2; color: white; }
+.box-3 { background-color: #D288FF ; color: white; }
+.box-4 { background-color: #000000; color: white; }
+
+
+/* Lower Div */
+.box-lower {
+    display: flex;
+    height: 400px;
+    background-color: #483EFF;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.box-lower-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin-left: 50px;
+    width: 30%;
+}
+
+.box-lower-left-item {
+    border: 5px solid white;
+    color: white;
+    height: 50px;
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 30px;
+    padding-top: 30px;
+}
+
+#box-lower-left-item-1 {
+    border: none;
+    background-color:#BCE0F6;
+    color: black;
+    font-weight: bold;
+}
+
+.box-lower-right {
+    background-color: white;
+    color: black;
+    width: 70%;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+/* Your Information */
+.lower-right-header{
+    font-size: 30px;
+    color:#04285A;
+    font-weight: bold;
+}
+
+table{
+    margin-top: 15px;
+    border-spacing:20px 10px;
+}
+
+.lower-right-key{
+    font-size: 25px;
+    font-weight: bold;
+    color: #04285A;
+}
+
+.lower-right-data{
+    font-size: 20px;
+    color: #04285A;
+}
