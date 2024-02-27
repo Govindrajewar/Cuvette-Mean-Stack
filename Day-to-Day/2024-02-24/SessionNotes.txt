@@ -1,0 +1,92 @@
+DOM: Document Object Model
+
+# Introduction to DOM:
+
+> Using following methods we can manipulate DOM.
+
+    - document.getElementById('id');
+    - document.getElementsByClassName('className');
+    - document.getElementsByTagName('h1');
+
+> Methods for manipulating the DOM it only selects one element.
+    - document.querySelector('#id')
+    - document.querySelector('.class')
+    - document.querySelector('elementName')
+
+
+# Apply CSS to DOM element using JavaScript:
+
+> Way 1:
+document.getElementById('id').style.color = 'white';
+document.getElementById('id').style.backgroundColor = 'black';
+
+> Way 2:
+document.getElementById('id').cssText = 'color: white; background-color: black';
+
+
+# Event Handling:
+Event: Any minute activity performed by the user on the webpage.
+
+Way 1: Using event handler as attributes(onclick, ondblclick, ...)
+
+> click events:
+    - onclick
+    - ondblclick
+
+> mouse events:
+    - onmouseenter
+    - onmousemove
+
+> key press events:
+    - onkeypress
+    - onkeyup
+    - onkeydown
+
+Way 2: DOM addEventListner method:
+
+document.getElementById('id').addEventListener("click", function (){
+    // do something when clicked
+});
+
+
+# Only Applicable for body Tag:
+<body onload="console.log('Page Reloaded')">
+    // some body tags
+</body>
+
+
+# Event Propagation/ Event bubbling:
+eg.,
+
+document.getElementById('parent').addEventListener('click', function (e) {
+    console.log("Parent");
+});
+
+document.getElementById('child').addEventListener('click', function (e) {
+    console.log("Child");
+
+    // Command to stop event bubbling:
+    event.stopPropagation();
+});
+
+
+
+# Strict:
+<html>
+    <head>
+        <script>
+            "use strict";
+        </script>
+        <title></title>
+    </head>
+    <body>
+    </body>
+</html>
+
+
+# Pop-Ups:
+
+- alert("This is an alert");
+- confirm("Are you sure?");
+- prompt("Enter input :");
+

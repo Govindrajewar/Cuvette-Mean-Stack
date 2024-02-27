@@ -21,10 +21,11 @@ console.log(person['lastName']) // Output will be Rajewar
 
 // Adding new properties to an object
 Way 1: person.email = "abhirj@gmail.com";
-Way 1: person['city'] = "Nanded";
+Way 2: person['city'] = "Nanded";
 
 // Way 2: Using the set() method
 person.set('country','India');
+
 
 // Deleting a property from an object
 // Way 1 : delete person.age;
@@ -32,16 +33,18 @@ person.set('country','India');
 // Way 2 : Using the removeProperty() method
 person.removeProperty('country');
 
-// Checking if a property exists in an object
+
+> Checking if a property exists in an object
 if(person.hasOwnProperty('firstName')){
    console.log("Yes");
 }else{
    console.log("No");
 }
-// Getting all the keys/properties present inside an object
+
+> Getting all the keys/properties present inside an object
 console.log(Object.keys(person)); // Output will be ['firstName', 'lastName', 'email', 'city']
 
-// Checking if an object is empty or not
+> Checking if an object is empty or not
 if(Object.keys(person).length === 0){
    console.log("The object is Empty.");
 } else {
@@ -49,13 +52,101 @@ if(Object.keys(person).length === 0){
 }
 
 
-// Deleting a property from an object
+> Deleting a property from an object
 delete person.email;
 
 
-// Check if a property exists or not
+> Check if a property exists or not
 if('email' in person){
     console.log("Email is present");
 }else{
     console.log("Email is absent")
 }
+
+
+# Convert object to string:
+eg.,
+   const x = JSON.stringify(person);
+   console.log(x);
+
+# Convert string to object:
+eg.,
+   const y = JSON.parse(x);
+   console.log(y);
+
+
+# Inbuilt Constructors:
+   - Boolean
+   - Number
+   - Object
+
+> inbuilt methods for Object:
+.keys()  -> returns a list of all keys
+eg.,
+   console.log(Object.keys(person));
+
+.values  -> returns a list of all values
+eg.,
+   console.log(Object.values(person));
+
+.entries -> returns a list of all key-value pairs
+eg.,
+   console.log(Object.entries(person));
+
+
+# Iterate through objects:
+
+> Using forEach loop:
+   eg.,
+      Object.keys(person).forEach(function (key) {
+         console.log(key +" : "+ person[key] );
+      });
+
+> Using for-of loop:
+   eg.,
+      console.log("Iterate through object using for-of loop");
+      for (let keys of Object.keys(person)){
+         console.log(keys +" : "+ person[keys] );
+      }
+
+> Using for-in loop:
+  eg.,
+   console.log("Iterate through object using for-in loop");
+   for (let key in person){
+      console.log(key +" : "+ person[key]);
+   }
+
+
+# Nested Object:
+eg.,
+   var student = {
+      firstName: "Abhi",
+      lastName: "Rajewar",
+      email: "abhi@gmail.com",
+      address: {
+         streetNo: 222,
+         landmark: "Near BSNL Exchange",
+         city: "Nanded",
+         pinCode: 431605
+      },
+      getAddress: function(){
+         console.log(`Stree No: ${this.address.streetNo} landmark: ${this.address.landmark} city: ${this.address.city} PinCode: ${this.address.pinCode}`);
+      }
+   }
+
+
+# Timer Events:
+
+> setTimeout() : Execute only once after delay of 3 seconds.
+syntax:
+      setTimeout( function(){
+         console.log("Hii");
+      }, 3000 );
+
+
+> setInterval() : Executes in loop after delay of every 3 seconds.
+syntax:
+      setInterval( function(){
+         console.log("Hello");
+      }, 3000 );
+

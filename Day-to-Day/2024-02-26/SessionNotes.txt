@@ -1,0 +1,53 @@
+BOM: Browser Object Model
+
+- Window objects / browser object model both are same.
+
+# 3 types of variable declarations:
+1. var:
+    - has Global Scope.
+    - can be redeclared.
+    - can be reassigned.
+
+2. let:
+    - has local/block Scope.
+    - can not be redeclared.
+    - can be reassigned.
+
+3. const:
+    - has local/block Scope.
+    - can not be redeclared.
+    - can not be reassigned.
+
+
+# Self invoking function:
+(function sayHi(){
+    console.log("Hii");
+}) ();
+
+
+# Closure: Inner function continues to have access to outer function variable even after outer function have executed.
+eg.,
+    let outer = function (){
+        let x = 10;
+        let inner = function (){
+            console.log(x);
+        }
+        return inner;
+    }
+
+    let def = outer();
+    def();          // output: 10
+
+
+# Arrow function:
+eg.,
+Way 1:
+    let sum = (a, b) => {
+        return a + b;
+    }
+    console.log(sum(10, 20));
+
+Way 2:
+    let sum = (a, b) => a+b;
+    console.log(sum(10, 20));
+
