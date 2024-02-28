@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strict & Pop-Up</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        // Invalid Assignment:
+        // x = 10;
+
+        var x = 10;
+        // console.log(x);
+    </script>
+
+    <button onclick="alert('This is alert')">alert</button><br><br>
+
+    <button onclick="confirm('Are you sure?')">confirm</button><br><br>
+
+    <button onclick="
+        x = prompt('Enter number to display on console');
+        console.log(x);
+        ">Click to enter input
+    </button>
+
+</body>
+</html>

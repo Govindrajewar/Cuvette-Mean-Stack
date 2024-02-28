@@ -5,18 +5,18 @@ BOM: Browser Object Model
 # 3 types of variable declarations:
 1. var:
     - has Global Scope.
-    - can be redeclared.
-    - can be reassigned.
+    - can be re-declared.
+    - can be re-assigned.
 
 2. let:
     - has local/block Scope.
-    - can not be redeclared.
-    - can be reassigned.
+    - can not be re-declared.
+    - can be re-assigned.
 
 3. const:
     - has local/block Scope.
-    - can not be redeclared.
-    - can not be reassigned.
+    - can not be re-declared.
+    - can not be re-assigned.
 
 
 # Self invoking function:

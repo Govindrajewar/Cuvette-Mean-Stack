@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Handling</title>
+
+    <style>
+        #parent{
+            height: 250px;
+            width:250px;
+
+            border: 1px solid #ccc;
+            background-color: aquamarine;
+        }
+
+        #child{
+            position: relative;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+
+            height: 100px;
+            width: 100px;
+            border: 1px solid #ccc;
+            background-color: red;
+        }
+
+        #justMove{
+            height: 100px;
+            width: 100px;
+            border: 1px solid #ccc;
+            background-color: green;
+        }
+
+        #inner{
+            height: 100px;
+            width: 100px;
+            background-color: violet;
+            border: 1px solid blue;
+
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        #outer{
+            height: 200px;
+            width: 200px;
+            background-color: beige;
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+
+<!-- Only applicable for body tag -->
+<body onload="console.log('Reloaded...')">
+    <h1>Event Handling</h1>
+
+    <h2> Click Events </h2>
+    <button onclick="onClick()">onclick</button>
+    <button ondblclick="onDblClick()">ondblclick</button>
+
+    <br><br>
+    <h2> Mouse Events </h2>
+
+    <h3>Mouse Enter</h3>
+    <div id="parent" onmouseover="onMouseEnterParent()">
+        <div id="child" onmouseover="onMouseEnterChild()"></div>
+    </div>
+
+
+    <h3>Mouse Move</h3>
+    <div id="justMove" onmousemove="onMouseMove()">
+    </div>
+
+
+    <br><br>
+    <h2>KeyBoard Events</h2>
+    <h3>Key pressed</h3>
+    <input type="text" placeholder="Enter Text" onkeypress="keyPressed()">
+
+    <h3>Key Up</h3>
+    <input type="text" placeholder="Enter Text" onkeyUp="keyUp()">
+
+    <h3>Key Down</h3>
+    <input type="text" placeholder="Enter Text" onkeydown="keyDown()">
+
+
+    <br><br>
+    <!-- Way 2: Using addEventListner -->
+    <h2>AddEventListner</h2>
+    <button id="btn-1">Click Event</button>
+
+    <button id="btn-2">Mouse Move Event</button>
+
+
+    <br><br>
+    <!-- Event Propagation / Event Bubbling -->
+    <h2>Event Propagation</h2>
+    <div id="outer" >
+        <div id="inner"></div>
+    </div>
+
+
+    <br><br><br><br>
+    <!-- Always add DOM Manipulation file at last of body Tag -->
+    <script src="Event-Handling.js"></script>
+</body>
+</html>
