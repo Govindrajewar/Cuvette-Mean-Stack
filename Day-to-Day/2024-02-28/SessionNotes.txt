@@ -1,0 +1,9 @@
+Prototypes:
+
+
+Class: We can create Class in 2 ways.
+
+Way 1:
+
+
+Way 2:

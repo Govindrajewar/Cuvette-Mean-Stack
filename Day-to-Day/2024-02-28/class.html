@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+
+    <script>
+        // declaration:
+        class Person1 {
+            name;
+            age;
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        let newPerson1 = new Person1("Abhi", 25);
+        console.log(newPerson1.name);
+        console.log(newPerson1.age);
+
+
+        // expression:
+        const person2 = class {
+            name;
+            age;
+
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+        let newPerson2 = new person2("Raj", 30);
+        console.log(newPerson2.name);
+        console.log(newPerson2.age);
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

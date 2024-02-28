@@ -1,0 +1,38 @@
+Refer:
+https://www.w3schools.com/js/js_this.asp
+
+# 'this' keyword: refers to current execution context.
+eg.,
+    const studentDetails = {
+        firstName: "Abhi",
+        lastName: "Rajewar",
+        email: "abhi@gmail.com",
+        fullName: function(){
+            console.log(this.firstName + " " + this.lastName);
+        }
+    }
+    studentDetails.fullName();
+
+
+# Constructor: special type of function to create objects.
+> In-Built Constructor:
+    - Boolean
+    - Number
+    - String
+eg.,
+    function Student(firstName, age, batch){
+        this.firstName = firstName;
+        this.age = age;
+        this.batch = batch;
+    }
+
+    let abhiDetails = new Student("Abhi", 25, "MERN");
+    console.log(abhiDetails);
+
+
+# call, apply, bind:
+
+call  : https://www.w3schools.com/js/js_function_call.asp
+apply : https://www.w3schools.com/js/js_function_apply.asp
+bind  : https://www.w3schools.com/js/js_function_bind.asp
+
