@@ -1,0 +1,10 @@
+# JQuery:
+
+Refer:
+https://jquery.com/
+https://jquery.com/download/
+
+
+> We can import jQuery in two ways:
+    1. import jQuery.js file
+    2. download jQuery using cdn

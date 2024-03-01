@@ -1,0 +1,56 @@
+# Promises:
+
+> Promises has two properties:
+    - State
+        - pending
+        - fulfilled (resolved)
+        - rejected
+    - Result
+
+eg.,
+const promise = new Promise( function (resolve, reject){
+    resolve();
+})
+
+promise
+    .then( function() {
+        console.log("Promise resolved");
+    })
+    .catch( function(){
+        console.log("Promise rejected");
+    })
+
+
+# Promise Chaining: is only works if .then() returns a promise.
+eg.,
+const promise = new Promise( function (resolve, reject) {
+    reject("Sorry, I don't like you");
+})
+
+promise
+    .then( function( result ) {
+        console.log(result);
+
+        // we can do chaining only if first .then() is returning a promise.
+        return result;
+    })
+    .then( function (result){
+        console.log(result);
+    })
+    .catch( function (result){
+        console.log(result) ;
+    })
+
+
+# Fetch: API calls
+eg.,
+const API = fetch('___Link___');
+
+API
+    .then( function (res){
+        console.log(res) ;
+    })
+    .catch( function (res){
+        console.log(res) ;
+    })
+
