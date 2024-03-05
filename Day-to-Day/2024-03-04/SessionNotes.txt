@@ -1,0 +1,21 @@
+# Async: the function is anonymous.
+syntax:
+
+async function demo(){
+    console.log("This is a demo");
+}
+demo(); // This will call the async function
+
+
+# Await:
+// The 'await' keyword allows you to pause and resume execution of an asynchronous function until the promise has been resolved or rejected.
+
+
+# Throw:
+- Used to throw an error when the promise fails or rejects.
+throw new Error('An error occurred');
+
+
+# Catch:
+- It's used to catch errors when the promise fails or rejects.
+
