@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <link rel="stylesheet" href="../css/micro-project-3.css">
+</head>
+
+<body>
+    <div class="root">
+
+        <div class="calculator">
+            <div id="header">Calculator</div>
+
+            <input id="displayScreen" value="0" readonly />
+
+            <div  class="buttons">
+                <div id="buttonBar">
+                    <button onclick="updateInput('7')">7</button>
+                    <button onclick="updateInput('8')">8</button>
+                    <button onclick="updateInput('9')">9</button>
+                    <button onclick="deleteLastInput()" id="del">DEL</button>
+
+                    <button onclick="updateInput('4')">4</button>
+                    <button onclick="updateInput('5')">5</button>
+                    <button onclick="updateInput('6')">6</button>
+                    <button onclick="updateInput('+')">+</button>
+
+                    <button onclick="updateInput('1')">1</button>
+                    <button onclick="updateInput('2')">2</button>
+                    <button onclick="updateInput('3')">3</button>
+                    <button onclick="updateInput('-')">-</button>
+
+                    <button onclick="updateInput('.')">.</button>
+                    <button onclick="updateInput('0')">0</button>
+                    <button onclick="updateInput('/')">/</button>
+                    <button onclick="updateInput('*')">x</button>
+                </div>
+
+                <div class="botton-btn">
+                    <button onclick="resetInput()" id="reset">RESET</button>
+                    <button onclick="calculate()" id="equal">=</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/micro-project-3.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+/* Reset default margin, padding, and font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+/* Root container styles */
+.root {
+    background-color: #3B4664;
+    height: 100vh;
+    width: 100%;
+}
+
+
+/* Calculator container styles */
+.calculator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Header styles */
+#header {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    height: 5vh;
+}
+
+input{
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* Button container styles */
+.buttons {
+    background-color: #252D44;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+
+/* Common button styles */
+button {
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #EAE3DB;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Display screen styles */
+#displayScreen {
+    background-color: #181F32;
+    height: 10vh;
+    color: white;
+    text-align: right;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    letter-spacing: 3px;
+}
+
+
+/* Button bar container styles */
+#buttonBar {
+    height: 40vh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+/* Specific button styles */
+#del, #reset {
+    background-color: #3B4664;
+    color: white;
+}
+
+#equal {
+    background-color: #D13F30;
+    color: white;
+}
+
+
+/* Additional button container styles */
+.botton-btn {
+    height: 10vh;
+    margin-top: 10px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
