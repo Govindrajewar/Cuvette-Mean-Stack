@@ -48,11 +48,16 @@
             </div>
         </div>
 
+
         <div class="replay-btn" onclick="hideResult();">REPLAY</div>
 
 
-        <div class="hide-btn"><button onclick="hideRules()">X</button></div>
-        <div onclick="showRules()" class="rules-btn">RULES</div>
+        <div>
+            <div class="hide-btn"><button onclick="hideRules()">X</button></div>
+            <div onclick="showRules()" class="rules-btn">RULES</div>
+            <div onclick="nextScreen()" class="next-btn">NEXT</div>
+        </div>
+
 
         <div class="game-rules">
             <div id="h2">Game Rules</div>
@@ -64,6 +69,15 @@
                 <li>If both players lay down the same hand, each player lays down another hand</li>
             </ul>
         </div>
+
+
+        <!-- Next button Result -->
+        <div class="next">
+            <div class="trophy">🏆</div>
+            <div class="hurray">HURRAY!!</div>
+            <div class="message">YOU WON THE GAME</div>
+        </div>
+
     </div>
 
     <!-- Main Script -->

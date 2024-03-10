@@ -1,6 +1,7 @@
 // default visibility of rules & result is "hidden"
 hideRules();
 hideResult();
+hideNextBtn();
 
 
 function displayResult(input){
@@ -15,10 +16,8 @@ function displayResult(input){
     // compare user and computer selection
     updateResult(input, randomNumber);
 
-
-    setTimeout(function(){
-        display();
-    },1000)
+    // display result
+    display();
 }
 
 
@@ -26,6 +25,8 @@ function displayResult(input){
 function hideResult() {
     document.getElementsByClassName('display-result')[0].style.visibility = 'hidden';
     document.getElementsByClassName('replay-btn')[0].style.visibility = 'hidden';
+
+    hideNextBtn();
 }
 
 
@@ -65,6 +66,7 @@ function generateRandomNumber(min, max) {
 }
 
 
+// checking condition to show result
 function updateResult(input, randomNumber){
     if(input == randomNumber){
         draw();
@@ -91,19 +93,41 @@ function display(){
 }
 
 
-
 // Display result:
 function draw(){
-    document.getElementById('result').innerHTML = '<div><h2>TIE UP<h2></div>';
+    document.getElementById('result').innerHTML = '<div><h1>TIE UP<h1></div>';
     document.getElementsByClassName('replay-btn')[0].innerText = 'REPLAY';
 }
 
 function  userWin(){
-    document.getElementById('result').innerHTML = '<div><h2>YOU WIN<h2> <h3>AGAINST PC</h3></div>';
+    document.getElementById('result').innerHTML = '<div><h1>YOU WIN<h1> <h3>AGAINST PC</h3></div>';
     document.getElementsByClassName('replay-btn')[0].innerText = 'PLAY AGAIN';
+
+    // enable next button after user wins
+    document.getElementsByClassName('next-btn')[0].style.visibility = 'visible';
+    document.getElementsByClassName('rules-btn')[0].style.right = '200px';
 }
 
 function computerWin(){
-    document.getElementById('result').innerHTML = '<div><h2>YOU LOST<h2> <h3>AGAINST PC</h3></div>';
+    document.getElementById('result').innerHTML = '<div><h1>YOU LOST<h1> <h3>AGAINST PC</h3></div>';
     document.getElementsByClassName('replay-btn')[0].innerText = 'PLAY AGAIN';
+}
+
+
+// hide next button & change position of rules button
+function hideNextBtn(){
+    document.getElementsByClassName('next-btn')[0].style.visibility = 'hidden';
+    document.getElementsByClassName('rules-btn')[0].style.right = '50px';
+    document.getElementsByClassName('next')[0].style.visibility = 'hidden';
+}
+
+
+// display next screen as you won the game
+function nextScreen(){
+    document.getElementsByClassName('next')[0].style.visibility = 'visible';
+    document.getElementsByClassName('replay-btn')[0].style.visibility = 'visible';
+
+    document.getElementsByClassName('next-btn')[0].style.visibility = 'hidden';
+    document.getElementsByClassName('rules-btn')[0].style.right = '50px';
+
 }

@@ -81,6 +81,7 @@ body{
     bottom: 50px;
     right: 50px;
 
+    z-index: 2;
 }
 
 #h2{
@@ -112,7 +113,22 @@ li::marker {
     width: 100px;
     padding: 10px;
 
-    position: fixed;
+    position: absolute;
+    right: 50px;
+    bottom: 5px;
+}
+
+.next-btn{
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+
+    width: 100px;
+    padding: 10px;
+
+    position: absolute;
     right: 50px;
     bottom: 5px;
 }
@@ -127,7 +143,7 @@ li::marker {
     right: 30px;
     bottom: 50vh;
 
-    z-index: 1;
+    z-index: 3;
 }
 
 button{
@@ -137,7 +153,12 @@ button{
     font-size: 30px;
 }
 
-.rules-btn:hover, .hide-btn:hover, button:hover {
+/* pointer effect after hover */
+button:hover,
+.rules-btn:hover,
+.hide-btn:hover,
+.next-btn:hover,
+.symbol:hover {
     cursor: pointer;
 }
 
@@ -162,38 +183,29 @@ button{
     border-radius: 50%;
 }
 
-#rock{
-    border: 10px solid #0074B6;
-}
-
-#paper{
-    border: 10px solid #BD00FF;
-}
-
-#scissor{
-    border: 10px solid #FFA943;
-    padding: 10px 20px;
-}
-
-.symbol:hover{
-    cursor: pointer;
-}
 
 
 /* Rock Paper Scissor */
 #rock{
+    border: 10px solid #0074B6;
+
     position: absolute;
     top: 45%;
     left: 40%;
 }
 
 #scissor{
+    border: 10px solid #FFA943;
+    padding: 10px 20px;
+
     position: absolute;
     top: 45%;
     left: 53%;
 }
 
 #paper{
+    border: 10px solid #BD00FF;
+
     position: absolute;
     top: 70%;
     left: 47%;
@@ -227,7 +239,7 @@ button{
 }
 
 #result{
-    font-size: 20px;
+    text-align: center;
     color: white;
 }
 
@@ -243,6 +255,7 @@ button{
     border: 10px solid #0074B6;
 }
 
+
 /* Replay Button */
 .replay-btn{
     color: grey;
@@ -257,6 +270,36 @@ button{
     width: 100px;
 
     position: absolute;
-    top: 80%;
+    top: 85%;
+}
+
+
+/* Next button Result */
+.next{
+
+    background-color: #8CC461;
+    color: white;
+    width: 80vw;
+    height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 40px;
+    z-index: 1;
+}
+
+
+.trophy{
+    font-size: 200px;
+}
+
+.hurray{
+    font-size: 100px;
+}
+
+.message{
+    font-size: 45px;
 }
 
