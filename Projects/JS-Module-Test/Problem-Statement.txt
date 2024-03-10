@@ -1,0 +1,15 @@
+Notion Link: https://momentous-nerine-3a5.notion.site/JavaScript-Major-Module-Test-Stone-Paper-Scissor-fce06b41cee74d2790f370dd9fa0e8ae
+
+Figma Link: https://www.figma.com/file/PcJKaVsqoRk8g9xKdD3DQu/Cuvette-Task?type=design&node-id=0-1&mode=design&t=WJRdJ5EgXmpDCsPY-0
+
+# Create Stone Paper Scissors Game
+
+* Conditions
+Stone       <       Paper
+Paper       <       Scissors
+Scissors    <       Stone
+
+
+* Rules:
+
+

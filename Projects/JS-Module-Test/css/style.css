@@ -1,0 +1,262 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+
+}
+
+.root{
+    height: 100vh;
+    width: 100%;
+    background-color: #8CC461;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* Header-Counter */
+.header-counter{
+    border: 3px solid white;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 20px;
+    width: 60vw;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 50px;
+}
+
+
+.header{
+    color: white;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+
+.counter{
+    display: flex;
+}
+
+
+.score-bar{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+
+    height: 100px;
+    width: 100px;
+
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+
+    text-align: center;
+    line-height: 24px;
+}
+
+.score{
+    font-size: 40px;
+    margin-top: 16px;
+}
+
+
+
+/* Game Rules Chart */
+.game-rules{
+    background-color: #004429;
+
+    height: 40vh;
+    width: 20vw;
+    border: 5px solid white;
+
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+}
+
+#h2{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+li{
+    font-size: 16px;
+    line-height: 20px;
+}
+
+li::marker {
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* Buttons */
+.rules-btn{
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+
+    width: 100px;
+    padding: 10px;
+
+    position: fixed;
+    right: 50px;
+    bottom: 5px;
+}
+
+.hide-btn{
+    height: fit-content;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+
+    position: fixed;
+    right: 30px;
+    bottom: 50vh;
+
+    z-index: 1;
+}
+
+button{
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.rules-btn:hover, .hide-btn:hover, button:hover {
+    cursor: pointer;
+}
+
+
+/* game */
+.game{
+    font-size: 325px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+.symbol{
+    font-size: 50px;
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#rock{
+    border: 10px solid #0074B6;
+}
+
+#paper{
+    border: 10px solid #BD00FF;
+}
+
+#scissor{
+    border: 10px solid #FFA943;
+    padding: 10px 20px;
+}
+
+.symbol:hover{
+    cursor: pointer;
+}
+
+
+/* Rock Paper Scissor */
+#rock{
+    position: absolute;
+    top: 45%;
+    left: 40%;
+}
+
+#scissor{
+    position: absolute;
+    top: 45%;
+    left: 53%;
+}
+
+#paper{
+    position: absolute;
+    top: 70%;
+    left: 47%;
+}
+
+
+/* Display result */
+.display-result{
+    background-color:#8CC461;
+
+    height: 50vh;
+    width: 60vw;
+
+    position: absolute;
+    top: 40%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selection{
+    height: 200px;
+}
+
+.user{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#result{
+    font-size: 20px;
+    color: white;
+}
+
+.result-icon{
+    font-size: 50px;
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 15px;
+    margin-left: 25px;
+    text-align: center;
+    border-radius: 50%;
+    border: 10px solid #0074B6;
+}
+
+/* Replay Button */
+.replay-btn{
+    color: grey;
+    background-color:beige;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    border-radius: 10px;
+    padding: 10px;
+    height: 20px;
+    width: 100px;
+
+    position: absolute;
+    top: 80%;
+}
+
