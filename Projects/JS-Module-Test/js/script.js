@@ -1,3 +1,7 @@
+let computerScore = 0;
+let playerScore = 0;
+
+
 // default visibility of rules & result is "hidden"
 hideRules();
 hideResult();
@@ -100,6 +104,9 @@ function draw(){
 }
 
 function  userWin(){
+    // Increase player score
+    document.getElementById('player-score').innerText = ++playerScore;
+
     document.getElementById('result').innerHTML = '<div><h1>YOU WIN<h1> <h3>AGAINST PC</h3></div>';
     document.getElementsByClassName('replay-btn')[0].innerText = 'PLAY AGAIN';
 
@@ -109,6 +116,9 @@ function  userWin(){
 }
 
 function computerWin(){
+    // Increase computer score
+    document.getElementById('computer-score').innerText = ++computerScore;
+
     document.getElementById('result').innerHTML = '<div><h1>YOU LOST<h1> <h3>AGAINST PC</h3></div>';
     document.getElementsByClassName('replay-btn')[0].innerText = 'PLAY AGAIN';
 }
