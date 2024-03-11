@@ -1,11 +1,8 @@
-let computerScore = 0;
-let playerScore = 0;
-
-
 // default visibility of rules & result is "hidden"
 hideRules();
 hideResult();
 hideNextBtn();
+backupScore();
 
 
 function displayResult(input){
@@ -104,8 +101,8 @@ function draw(){
 }
 
 function  userWin(){
-    // Increase player score
-    document.getElementById('player-score').innerText = ++playerScore;
+    // increase score after player win
+    playerScore();
 
     document.getElementById('result').innerHTML = '<div><h1>YOU WIN<h1> <h3>AGAINST PC</h3></div>';
     document.getElementsByClassName('replay-btn')[0].innerText = 'PLAY AGAIN';
@@ -116,8 +113,8 @@ function  userWin(){
 }
 
 function computerWin(){
-    // Increase computer score
-    document.getElementById('computer-score').innerText = ++computerScore;
+    // increase score after computer win
+    computerScore();
 
     document.getElementById('result').innerHTML = '<div><h1>YOU LOST<h1> <h3>AGAINST PC</h3></div>';
     document.getElementsByClassName('replay-btn')[0].innerText = 'PLAY AGAIN';
@@ -140,4 +137,43 @@ function nextScreen(){
     document.getElementsByClassName('next-btn')[0].style.visibility = 'hidden';
     document.getElementsByClassName('rules-btn')[0].style.right = '50px';
 
+}
+
+
+// storing score in local storage
+function computerScore() {
+    if (localStorage.computerScore) {
+        localStorage.computerScore = Number(localStorage.computerScore)+1;
+    } else {
+        localStorage.computerScore = 1;
+    }
+    document.getElementById("computer-score").innerHTML = localStorage.computerScore;
+}
+
+function playerScore() {
+    if (localStorage.playerScore) {
+        localStorage.playerScore = Number(localStorage.playerScore)+1;
+    } else {
+        localStorage.playerScore = 1;
+    }
+    document.getElementById("player-score").innerHTML = localStorage.playerScore;
+}
+
+
+// function to display score after refresh
+function backupScore(){
+    document.getElementById("computer-score").innerHTML = localStorage.computerScore;
+    document.getElementById("player-score").innerHTML = localStorage.playerScore;
+}
+
+
+// below functionality is deprecated, as we don't want to reset the scores.
+document.getElementById('reset-btn').style.visibility = 'hidden';
+
+// function to reset local Storage
+function resetScore(){
+    localStorage.computerScore = 0;
+    localStorage.playerScore = 0;
+    document.getElementById("computer-score").innerHTML = localStorage.computerScore;
+    document.getElementById("player-score").innerHTML = localStorage.playerScore;
 }

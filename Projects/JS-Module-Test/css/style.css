@@ -303,3 +303,24 @@ button:hover,
     font-size: 45px;
 }
 
+
+/* Reset button */
+#reset-btn{
+    background-color: #0074B6;
+    color: white;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 10px;
+
+    position: absolute;
+    bottom:5px;
+    left: 50px;
+
+}
+
+#reset-btn:hover{
+    cursor: pointer;
+    background-color: #8CC461;
+}
