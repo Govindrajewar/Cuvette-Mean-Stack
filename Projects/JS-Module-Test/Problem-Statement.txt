@@ -8,8 +8,3 @@ Figma Link: https://www.figma.com/file/PcJKaVsqoRk8g9xKdD3DQu/Cuvette-Task?type=
 Stone       <       Paper
 Paper       <       Scissors
 Scissors    <       Stone
-
-
-* Rules:
-
-
