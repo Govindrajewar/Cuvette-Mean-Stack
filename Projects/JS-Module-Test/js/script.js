@@ -142,6 +142,8 @@ function nextScreen(){
     document.getElementsByClassName('next-btn')[0].style.visibility = 'hidden';
     document.getElementsByClassName('rules-btn')[0].style.right = '50px';
 
+    document.getElementsByClassName('replay-btn')[0].style.top = '90%';
+
 }
 
 

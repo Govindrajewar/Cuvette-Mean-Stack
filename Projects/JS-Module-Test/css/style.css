@@ -135,8 +135,8 @@ li::marker {
 
 .hide-btn{
     height: fit-content;
+    border: 5px solid white;
     border-radius: 50%;
-    padding: 5px;
     background-color: white;
 
     position: fixed;
@@ -158,7 +158,8 @@ button:hover,
 .rules-btn:hover,
 .hide-btn:hover,
 .next-btn:hover,
-.symbol:hover {
+.symbol:hover,
+.replay-btn {
     cursor: pointer;
 }
 
@@ -259,7 +260,6 @@ button:hover,
     background-color:beige;
     text-align: center;
     font-weight: bold;
-    cursor: pointer;
 
     border-radius: 10px;
     padding: 10px;
@@ -267,7 +267,7 @@ button:hover,
     width: 100px;
 
     position: absolute;
-    top: 85%;
+    top: 75%;
 }
 
 
@@ -308,24 +308,3 @@ button:hover,
     font-size: 45px;
 }
 
-
-/* Reset button */
-#reset-btn{
-    background-color: #0074B6;
-    color: white;
-    font-size: 20px;
-    border: 1px solid white;
-    border-radius: 10px;
-    height: fit-content;
-    padding: 10px;
-
-    position: absolute;
-    bottom:5px;
-    left: 50px;
-
-}
-
-#reset-btn:hover{
-    cursor: pointer;
-    background-color: #8CC461;
-}
