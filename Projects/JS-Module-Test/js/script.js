@@ -65,6 +65,9 @@ function generateRandomNumber(min, max) {
 
 // checking condition to show result
 function updateResult(input, randomNumber){
+    // reset box shadows:
+    resetBoxShadow();
+
     if(input == randomNumber){
         draw();
     }
@@ -106,6 +109,9 @@ function  userWin(){
     // enable next button after user wins
     document.getElementsByClassName('next-btn')[0].style.visibility = 'visible';
     document.getElementsByClassName('rules-btn')[0].style.right = '200px';
+
+    // adding shadow
+    document.getElementsByClassName('result-icon')[0].style.boxShadow = '0 0 0 30px rgba(9, 168, 43, 1), 0 0 0 60px rgba(29, 168, 43, 0.79), 0 0 0 80px rgba(46, 154, 37, 0.39)';
 }
 
 function computerWin(){
@@ -114,6 +120,9 @@ function computerWin(){
 
     document.getElementById('result').innerHTML = '<div><h1>YOU LOST<h1> <h3>AGAINST PC</h3></div>';
     document.getElementsByClassName('replay-btn')[0].innerText = 'PLAY AGAIN';
+
+    // adding shadow
+    document.getElementsByClassName('result-icon')[1].style.boxShadow = '0 0 0 30px rgba(9, 168, 43, 1), 0 0 0 60px rgba(29, 168, 43, 0.79), 0 0 0 80px rgba(46, 154, 37, 0.39)';
 }
 
 
@@ -169,4 +178,10 @@ function loadDefault(){
     hideResult();
     hideNextBtn();
     backupScore();
+}
+
+// reset box shadow function
+function resetBoxShadow(){
+    document.getElementsByClassName('result-icon')[0].style.boxShadow = 'none';
+    document.getElementsByClassName('result-icon')[1].style.boxShadow = 'none';
 }
