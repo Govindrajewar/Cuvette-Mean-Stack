@@ -1,9 +1,5 @@
 // default visibility of rules & result is "hidden"
-hideRules();
-hideResult();
-hideNextBtn();
-backupScore();
-
+loadDefault();
 
 function displayResult(input){
 
@@ -49,13 +45,13 @@ function userSelected(user, input){
 
     switch(input){
         case 1:
-            document.getElementsByClassName('result-icon')[user].innerText = '✊';
+            document.getElementsByClassName('result-icon')[user].style.backgroundImage = "url('../css/rock.png')";
             break;
         case 2:
-            document.getElementsByClassName('result-icon')[user].innerText = '✌';
+            document.getElementsByClassName('result-icon')[user].style.backgroundImage = "url('../css/scissor.png')";
             break;
         case 3:
-            document.getElementsByClassName('result-icon')[user].innerText = '✋';
+            document.getElementsByClassName('result-icon')[user].style.backgroundImage = "url('../css/paper.png')";
             break;
     }
 }
@@ -167,13 +163,10 @@ function backupScore(){
 }
 
 
-// below functionality is deprecated, as we don't want to reset the scores.
-document.getElementById('reset-btn').style.visibility = 'hidden';
-
-// function to reset local Storage
-function resetScore(){
-    localStorage.computerScore = 0;
-    localStorage.playerScore = 0;
-    document.getElementById("computer-score").innerHTML = localStorage.computerScore;
-    document.getElementById("player-score").innerHTML = localStorage.playerScore;
+// function to display default page:
+function loadDefault(){
+    hideRules();
+    hideResult();
+    hideNextBtn();
+    backupScore();
 }

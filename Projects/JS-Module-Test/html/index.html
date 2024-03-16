@@ -27,9 +27,9 @@
 
         <div class="main-game">
             <div class="game">▽</div>
-            <div onclick="displayResult(1)" class="symbol" id="rock">✊</div>
-            <div onclick="displayResult(2)" class="symbol" id="scissor">✌</div>
-            <div onclick="displayResult(3)" class="symbol" id="paper">✋</div>
+            <div onclick="displayResult(1)" class="symbol" id="rock"></div>
+            <div onclick="displayResult(2)" class="symbol" id="scissor"></div>
+            <div onclick="displayResult(3)" class="symbol" id="paper"></div>
         </div>
 
         <div class="display-result">
@@ -73,14 +73,10 @@
 
         <!-- Next button Result -->
         <div class="next">
-            <div class="trophy">🏆</div>
+            <div class="bg-image"><div class="trophy"><img src="../css/trophy.png" alt="trophy-image"/></div></div>
             <div class="hurray">HURRAY!!</div>
             <div class="message">YOU WON THE GAME</div>
         </div>
-
-        <!-- Reset Score button -->
-        <!-- deprecated as functionality is not required. -->
-        <div id="reset-btn" type="button" onclick="resetScore();">Reset Score</div>
 
     </div>
 

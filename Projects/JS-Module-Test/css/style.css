@@ -174,13 +174,13 @@ button:hover,
 
 
 .symbol{
-    font-size: 50px;
-    background-color: white;
-    height: fit-content;
-    width: fit-content;
-    padding: 10px 15px;
-    text-align: center;
+    background-color: #FFFFFF;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
+    border: 10px solid #0074B6;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -188,27 +188,26 @@ button:hover,
 /* Rock Paper Scissor */
 #rock{
     border: 10px solid #0074B6;
-
-    position: absolute;
+    position: fixed;
     top: 45%;
     left: 40%;
+    background-image: url('../css/rock.png');
 }
 
 #scissor{
     border: 10px solid #FFA943;
-    padding: 10px 20px;
-
-    position: absolute;
+    position: fixed;
     top: 45%;
     left: 53%;
+    background-image: url('../css/scissor.png');
 }
 
 #paper{
     border: 10px solid #BD00FF;
-
-    position: absolute;
+    position: fixed;
     top: 70%;
     left: 47%;
+    background-image: url('../css/paper.png');
 }
 
 
@@ -238,21 +237,19 @@ button:hover,
     margin-bottom: 20px;
 }
 
-#result{
+#result {
     text-align: center;
     color: white;
 }
 
 .result-icon{
-    font-size: 50px;
-    background-color: white;
-    height: fit-content;
-    width: fit-content;
-    padding: 10px 15px;
-    margin-left: 25px;
-    text-align: center;
+    background-color: #FFFFFF;
     border-radius: 50%;
     border: 10px solid #0074B6;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+    width: 100px;
 }
 
 
@@ -276,10 +273,9 @@ button:hover,
 
 /* Next button Result */
 .next{
-
     background-color: #8CC461;
     color: white;
-    width: 80vw;
+    width: 100vw;
     height: 75vh;
 
     display: flex;
@@ -292,7 +288,16 @@ button:hover,
 
 
 .trophy{
-    font-size: 200px;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.bg-image{
+    background-image: url('../css/stars.png');
+    width: 500px;
+    height: 300px;
+    margin-bottom: 50px;
 }
 
 .hurray{
