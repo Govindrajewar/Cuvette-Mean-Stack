@@ -69,16 +69,16 @@ body{
 .game-rules{
     background-color: #004429;
 
-    height: 40vh;
+    height: 45vh;
     width: 20vw;
     border: 5px solid white;
 
     border-radius: 10px;
     color: white;
-    padding: 15px;
+    padding: 15px 0px 20px;
 
     position: fixed;
-    bottom: 50px;
+    bottom: 70px;
     right: 50px;
 
     z-index: 2;
@@ -86,19 +86,19 @@ body{
 
 #h2{
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 li{
-    font-size: 16px;
+    font-size: 15px;
     line-height: 20px;
+    margin: 10px;
 }
 
 li::marker {
     color: yellow;
     font-size: 30px;
-    font-weight: bold;
 }
 
 
@@ -112,10 +112,10 @@ li::marker {
 
     width: 100px;
     padding: 10px;
+    letter-spacing: 2px;
 
     position: absolute;
-    right: 50px;
-    bottom: 5px;
+    bottom: 10px;
 }
 
 .next-btn{
@@ -127,10 +127,11 @@ li::marker {
 
     width: 100px;
     padding: 10px;
+    letter-spacing: 2px;
 
     position: absolute;
     right: 50px;
-    bottom: 5px;
+    bottom: 10px;
 }
 
 .hide-btn{
@@ -141,7 +142,7 @@ li::marker {
 
     position: fixed;
     right: 30px;
-    bottom: 50vh;
+    bottom: 58vh;
 
     z-index: 3;
 }
@@ -196,7 +197,7 @@ button:hover,
 }
 
 #scissor{
-    border: 10px solid #FFA943;
+    border: 10px solid #BD00FF;
     position: fixed;
     top: 45%;
     left: 53%;
@@ -204,7 +205,7 @@ button:hover,
 }
 
 #paper{
-    border: 10px solid #BD00FF;
+    border: 10px solid #FFA943;
     position: fixed;
     top: 70%;
     left: 47%;
@@ -229,18 +230,24 @@ button:hover,
 
 .selection{
     height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .user{
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    z-index: 1;
 }
 
 #result {
     text-align: center;
     color: white;
+    letter-spacing: 2px;
 }
 
 .result-icon{
@@ -264,10 +271,13 @@ button:hover,
     border-radius: 10px;
     padding: 10px;
     height: 20px;
-    width: 100px;
+    /* width: 100px; */
 
     position: absolute;
     top: 75%;
+
+    letter-spacing: 2px;
+    z-index: 2;
 }
 
 
@@ -276,7 +286,7 @@ button:hover,
     background-color: #8CC461;
     color: white;
     width: 100vw;
-    height: 80vh;
+    height: 85vh;
 
     display: flex;
     flex-direction: column;

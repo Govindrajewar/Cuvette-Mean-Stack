@@ -46,12 +46,15 @@ function userSelected(user, input){
     switch(input){
         case 1:
             document.getElementsByClassName('result-icon')[user].style.backgroundImage = "url('../css/rock.png')";
+            document.getElementsByClassName('result-icon')[user].style.border = '10px solid #0074B6';
             break;
         case 2:
             document.getElementsByClassName('result-icon')[user].style.backgroundImage = "url('../css/scissor.png')";
+            document.getElementsByClassName('result-icon')[user].style.border = '10px solid #BD00FF';
             break;
         case 3:
             document.getElementsByClassName('result-icon')[user].style.backgroundImage = "url('../css/paper.png')";
+            document.getElementsByClassName('result-icon')[user].style.border = '10px solid #FFA943';
             break;
     }
 }
@@ -111,7 +114,7 @@ function  userWin(){
     document.getElementsByClassName('rules-btn')[0].style.right = '200px';
 
     // adding shadow
-    document.getElementsByClassName('result-icon')[0].style.boxShadow = '0 0 0 30px rgba(9, 168, 43, 1), 0 0 0 60px rgba(29, 168, 43, 0.79), 0 0 0 80px rgba(46, 154, 37, 0.39)';
+    document.getElementsByClassName('result-icon')[0].style.boxShadow = '0 0 0 30px rgba(40,154,39,255), 0 0 0 60px rgba(50,166,47,255), 0 0 0 80px rgba(102,178,72,255)';
 }
 
 function computerWin(){
@@ -122,7 +125,7 @@ function computerWin(){
     document.getElementsByClassName('replay-btn')[0].innerText = 'PLAY AGAIN';
 
     // adding shadow
-    document.getElementsByClassName('result-icon')[1].style.boxShadow = '0 0 0 30px rgba(9, 168, 43, 1), 0 0 0 60px rgba(29, 168, 43, 0.79), 0 0 0 80px rgba(46, 154, 37, 0.39)';
+    document.getElementsByClassName('result-icon')[1].style.boxShadow = '0 0 0 30px rgba(40,154,39,255), 0 0 0 60px rgba(50,166,47,255), 0 0 0 80px rgba(102,178,72,255)';
 }
 
 
@@ -141,9 +144,7 @@ function nextScreen(){
 
     document.getElementsByClassName('next-btn')[0].style.visibility = 'hidden';
     document.getElementsByClassName('rules-btn')[0].style.right = '50px';
-
-    document.getElementsByClassName('replay-btn')[0].style.top = '90%';
-
+    document.getElementsByClassName('replay-btn')[0].style.top = '85%';
 }
 
 
