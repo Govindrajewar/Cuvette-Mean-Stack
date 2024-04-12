@@ -1,0 +1,49 @@
+# React Introduction:
+- React is build on top of JavaScript.
+- React is Created & maintained by facebook/meta.
+- React is javascript library for web & native user interfaces.
+- React is SPA.(Single Page Application)
+Eg., Netflix is created using React.
+
+- Components:
+    - Class based components
+    - Function based components
+
+- JSX:  JavaScript + XML
+
+
+# Command to create react app
+    - npx create-react-app <App-Name>
+    - cd <App-Name>
+    - npm start (App will launch in localhost:3000)
+
+
+> How to use Components in index.js
+1. <App/>
+2. <App><App/>
+
+> There are 4 important files in React Application.
+    - src/index.js
+    - src/index.css
+    - src/App.js
+    - src/App.css
+
+
+Official Website: https://react.dev
+Documentation: https://react.dev/learn
+References:
+- https://www.w3schools.com/react/default.asp
+- https://github.com/facebook/create-react-app
+
+* Node can not work alone, so we need npm to manage the process.
+> node.js Download:
+https://nodejs.org/en/download
+
+> npm packages link
+https://www.npmjs.com/
+
+> react npm package
+https://www.npmjs.com/package/create-react-app
+
+> React Extension for Chrome:
+https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
