@@ -1,0 +1,70 @@
+Install VS Code Extension:
+Extension Name: ES7 React/Redux/GraphQL/React-Native snippets
+Developer: rodrigovallades
+
+# Function based component emmet:
+rfce + enter
+
+
+# Refer:
+    - https://react.dev/learn#displaying-data
+    - https://react.dev/learn#conditional-rendering
+    - https://react.dev/learn#rendering-lists
+
+
+In HTML : Tags and attributes
+In React: Components and props
+
+
+# Displaying Data: JavaScript expression inside JSX should be used with {}.
+
+# Adding Style:
+1. Inline Style:
+eg.,
+    <h3 style={{fontStyle: 'italic'}}>Hobbies:</h3>
+
+
+2. Internal Style:
+eg.,
+    <p style={internalStyle}>
+
+    const internalStyle ={
+        color: 'red'
+    }
+
+
+3. External Style:
+eg.,
+
+
+
+# Fragments: Can be used to encapsulated multiple elements in one single parent.
+
+
+# Conditional Rendering: In React, there is no special syntax for writing conditions.
+eg.,
+    {
+        studentDetails.isGraduated
+        &&
+        <p style={internalStyle}>
+        <span className='graduated-badge'>Graduated</span>
+        {"Degree Name: "+studentDetails.education.degree.name}<br />
+        {"Degree Institute: "+studentDetails.education.degree.institute}<br />
+        {"Degree University: "+studentDetails.education.degree.university}<br />
+        {"Degree Year: "+studentDetails.education.degree.year}<br />
+        </p>
+    }
+
+
+# Rendering Lists: You will reply on JavaScript feature like 'for' loop and the array "map()" function to render lists of Components.
+eg.,
+    <h3 style={{fontStyle: 'italic'}}>Hobbies:</h3>
+    <ul>
+        {
+            studentDetails.hobbies.map( (hobby, index) => (
+                <li key={index}>{hobby}</li>
+                )
+            )
+        }
+    </ul>
+
