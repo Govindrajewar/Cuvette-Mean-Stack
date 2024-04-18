@@ -1,0 +1,10 @@
+Refer:
+    - https://legacy.reactjs.org/docs/getting-started.html
+    - https://legacy.reactjs.org/docs/forms.html
+
+
+# Forms (Controlled component):
+- where react state is the single source of truth.
+
+1. Assign state value to the 'value' prop.
+2. Link state handlers to event handlers.

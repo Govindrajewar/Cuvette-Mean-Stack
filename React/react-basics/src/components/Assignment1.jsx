@@ -18,12 +18,11 @@ function Assignment1() {
     const displayName = () => {
 
         if (isDisplay) {
-            setButtonText('Display full Name');
-            setIsDisplay(false);
+            setButtonText('Display Full Name');
         } else {
-            setButtonText('Hide full Name');
-            setIsDisplay(true);
+            setButtonText('Hide Full Name');
         }
+        setIsDisplay(!isDisplay);
     }
 
 
