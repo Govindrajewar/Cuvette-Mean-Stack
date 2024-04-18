@@ -1,0 +1,45 @@
+# Refer:
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+    - https://www.w3schools.com/react/react_es6_spread.asp
+    - https://react.dev/learn#updating-the-screen
+    - https://react.dev/learn#using-hooks
+
+# Assignment:
+After revision, try to create one state which has true & false value,
+if the value is true then you will show full name else full name will be hidden.
+Also, it consist a button to toggle the true/false value.
+
+
+# Two types of data a React component can have:
+ i] Props: Properties (Data from Parent component to child component)
+ii] State: State (Data owned by the component)
+
+> React support only one way Data binding. (Parent ---> Child)
+
+# Destructuring Object:
+
+const studentDetails = {
+    firstName: 'Rahul',
+    lastName: 'Dravid'
+}
+
+const {firstName, lastName} = studentDetails;
+
+> A component re-renders whenever any of the two values change: State or Props
+
+
+# Hooks: Simple function of React to perform tasks efficiently.
+
+- useState (Creation of states in React components)
+
+- Before introduction of hooks: State could only be created in class based components.
+- After hooks was introduced: State could be created in function based component, new you could create create a React application with all function based components.
+
+> To use hooks, we need to 'import {useState} from React'
+
+> syntax:
+const [state, stateHandler] = useState(defaultValue);
+> eg.,
+const [count, setCount] = useState(0);
+const [firstName, setFirstName] = useState('Abhi');
+
