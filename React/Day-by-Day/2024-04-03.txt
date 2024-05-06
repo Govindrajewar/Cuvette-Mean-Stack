@@ -3,7 +3,7 @@ Refer:
     - https://legacy.reactjs.org/docs/forms.html
 
 
-# Forms (Controlled component):
+# Forms also knows as (Controlled component):
 - where react state is the single source of truth.
 
 1. Assign state value to the 'value' prop.

@@ -1,0 +1,99 @@
+Refer:
+    - https://miro.medium.com/v2/resize:fit:828/format:webp/0*YQbu93jW_il8q84V.png
+    - https://react.dev/learn#sharing-data-between-components
+
+> Render: Evaluating jsx and converting it into equivalent HTML.
+
+# Component Life Cycle Phases:
+
+1. Mounting (Berth)
+2. Updating (milestones)
+3. Unmounting (Death)
+
+
+# "useEffect" Hook:
+            This hooks helps in using component lifecycle methods inside functional component.
+
+
+# Component Life Cycle Method:
+
+1. Mounting:
+    - componentDidMount:
+        - initializing data
+        - fetching data
+        - useEffect with empty 'dependency array'.
+eg.,
+    useEffect( () => {
+        console.log('Component1 just Mounted');
+
+    }, [])
+
+2. Updating:
+    - componentDidUpdate:
+        - Based on state change there is need to perform some action.
+        - useEffect with respective state specified in the 'dependency array'.
+eg.,
+    useEffect( () => {
+        console.log('Component1 just Updated');
+    }, [count, hide])
+
+3. Unmounting:
+    - componentWillUnmount:
+        - Reset state value
+        - Reset form value
+        - useEffect which returns callback.
+eg.,
+    useEffect( () => {
+        return () => {
+            console.log('Component1 will Unmount');
+        }
+    })
+
+
+# HOC : Higher Order Components
+eg.,
+> [App.js]
+    <HOC Component={Component1}/>
+    <HOC Component={Component2}/>
+
+> [HOC.jsx]
+function HOC({Component}) {
+
+  return (
+    <div>
+      <h1>HOC</h1>
+      <Component />
+    </div>
+  )
+}
+
+
+# Wrapper Component:
+eg.,
+> [App.jsx]
+    <Wrapper>
+        <Section1 />
+        <Section2 />
+    </Wrapper>
+
+> [Wrapper.jsx]
+function Wrapper( props ) {
+
+    const wrapper = {
+        backgroundColor: '#eee',
+        padding: '10px',
+        margin: '10px'
+    }
+
+  return (
+    <div style={wrapper}>
+        {props.children}
+    </div>
+  )
+}
+
+
+# Sharing data between sibling components
+    - Lift the state Up
+    - Drill the props until the component which requires the state.
+
