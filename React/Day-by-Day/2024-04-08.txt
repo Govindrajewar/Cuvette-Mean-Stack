@@ -1,0 +1,31 @@
+# React Router:
+
+# Moment Package:
+> refer: momentjs.com
+> Install: npm i moment
+> Use package:
+Command: import moment from 'moment'
+
+
+# React Router Package:
+> refer: reactrouter.com
+> Install: npm i react-router-dom
+> Use package:
+Command:
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+    Link
+} from 'react-router-dom'
+
+syntax: here <Navigation/> & <Footer/> are global components.
+
+<BrowserRouter>
+    // If we add any components outside of the <Routes></Routes> then it will be global.
+    <Navigation/>
+    <Routes>
+        <Route path="/contact" element={<Contact/>}
+    </Routes>
+    <Footer/>
+</BrowserRouter>
