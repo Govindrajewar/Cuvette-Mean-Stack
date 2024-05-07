@@ -1,0 +1,70 @@
+> We can avoid Callback hell using Promises
+
+# Callback Hell:
+eg.,
+{
+    setTimeout(() => {
+        console.log("Restaurant Accepted your order.");
+        setTimeout(() => {
+            console.log("Preparing your order.");
+            setTimeout(() => {
+                console.log("Packing your order.");
+                setTimeout(() => {
+                    console.log("Order handed over to delivery person.");
+                    setTimeout(() => {
+                        console.log("Order delivered.");
+                    }, 10000);
+                }, 5000);
+            }, 10000);
+        }, 1000);
+    }, 2000);
+}
+
+
+# Code Using Promises:
+
+    const placeOrder = () => {
+        console.log("Order Placed");
+
+        acceptOrder()
+            .then(prepareOrder)
+            .then(packOrder)
+            .then(handOverOrder)
+            .then(deliverOrder)
+            .then(() => console.log("Enjoy your meal :-)")
+    }
+
+    const acceptOrder = () => new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            console.log("Restaurant Accepted your order.");
+            resolve();
+        }, 1000)
+    })
+
+    const prepareOrder = () => new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            console.log("Preparing your order.");
+            resolve();
+        }, 10000)
+    })
+
+    const packOrder = () => new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            console.log("Packing your order.");
+            resolve();
+        }, 5000)
+    })
+
+    const handOverOrder = () => new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            console.log("Order handed over to delivery person.");
+            resolve();
+        }, 12000)
+    })
+
+    const deliverOrder = () => new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            console.log("Order delivered.");
+            resolve();
+        }, 10000)
+    })
