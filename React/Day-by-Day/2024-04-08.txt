@@ -1,3 +1,18 @@
+# Refer:
+> NPM Packages:
+    - https://www.npmjs.com/package/moment    (Install)
+    - https://momentjs.com/                   (Documentation)
+    - https://www.npmjs.com/package/dayjs
+
+> React Router:
+    - https://www.npmjs.com/package/react-router-dom    (Install)
+    - https://reactrouter.com/                          (Documentation)
+    - https://www.w3schools.com/react/react_router.asp
+
+> React Bootstrap:
+    - https://react-bootstrap.netlify.app/docs/components/buttons
+
+
 # React Router:
 
 # Moment Package:
