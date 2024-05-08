@@ -1,0 +1,103 @@
+# Refer:
+> Install Packages:
+- https://www.npmjs.com/package/redux           (Install)
+- https://www.npmjs.com/package/react-redux     (Install)
+
+> Redux Documentation:
+- https://redux.js.org/                         (Documentation)
+
+
+> Redux is a Central State.
+
+# How can we create a redux state?
+
+> Install 'redux' & 'react-redux' packages
+> Import 'react-redux' and 'redux'
+
+
+# Reducer Function: have all the state values
+    - Arguments:
+        - state: initial state
+        - Action
+    - state
+    - logic for state update
+
+
+# React Redux Configurations:
+    - 'Provider' component with 'store' prop. (createStore, Provider)
+
+
+# Connect/Subscribe components to Redux ( useSelector )
+
+
+# Dispatch Actions:
+> Action needs to be dispatched.
+
+    - Action Creators
+    - Action Object
+    eg.,
+        {
+            type: 'INCREMENT'
+        }
+
+
+>>> How to implement Redux?
+
+> Create folder "store" which stores the logic for reducer function.
+
+- import { createStore } from 'redux'
+- Create reducer function which have Arguments as "state" and "action".
+- Create a store by passing reducer function in createStore( reducer )
+- export default store
+
+
+> In App.js
+- import { Provider } component from "react-redux"
+- Wrap all the react app inside <Provider></Provider> component
+
+> In store/index.js
+- Create a initialState object to store all the initial state values
+- Pass (state=initialState, action) in the initialState object
+- Add switch case in reducer function to check action type
+eg.,
+switch(action.type) {
+    case 'INCREMENT':
+        return {
+            ...state,
+            count: state.count + 1;
+        }
+    case 'DECREMENT':
+        return {
+            ...state,
+            count: state.count - 1;
+        }
+    default:
+        return state;
+}
+
+
+> In Child2 & GrandChild2:
+- import {useSelector} from 'react-redux'
+- update count value with count = useSelector(store => store.count)
+- Create action objects which return an object.
+eg.,
+    const increment = () => {
+        return {
+            type: 'INCREMENT'
+        }
+    }
+
+- import { useDispatch } from 'react-redux'
+- create dispatch function
+eg.,
+    const dispatch = useDispatch();
+
+- Now dispatch the action using onClick event.
+<button onClick={dispatch(increment())}>Increment</button>
+
+
+
+
+
+
+
