@@ -30,7 +30,6 @@ function AddTodo() {
       padding: "10px",
       fontSize: "16px",
       width: "80%",
-      border: "none",
       border: "1px solid black",
     },
 
