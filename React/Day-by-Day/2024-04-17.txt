@@ -1,0 +1,31 @@
+# Steps to create a React-Redux Application:
+1. Develop React App
+2. SetUp Redux
+3. React Redux Configuration(Provider)
+4. Subscribe component to redux
+5. Dispatch actions
+
+
+# Folder Structure:
+    - components
+    - store
+    - actions
+        - count.js  (contains action creators)
+    - reducer
+        - count.js (contains reducer functions)
+
+
+# Combine multiple reducers:
+import { combineReducer } from 'redux';
+
+const reducers = combineReducer({
+    countReducer: countReducer,
+    showReducer: showReducer
+})
+
+
+# Action type constants:
+export const INCREMENT = 'INCREMENT'
+
+import { INCREMENT } from '../actions/count'
+
