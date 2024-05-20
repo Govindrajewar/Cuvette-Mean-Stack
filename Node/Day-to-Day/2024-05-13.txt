@@ -1,0 +1,85 @@
+# Node.js:
+- is a free, open-source, cross-platform JavaScript runtime environment.
+- can write asynchronous code.
+- event driven
+- single threaded but highly scalable
+- Used for API creation, file system.
+
+
+> Download:         https://nodejs.org/en
+> Documentation:    https://nodejs.org/docs/latest/api/
+> GitHub:           https://github.com/nodejs/node
+
+
+> NPM: Node Package Manager
+
+> Client-Server Diagram: https://www.easeus.com/images/en/wiki-news/what-is-client-server-network.png
+
+
+
+# SetUp Node Repository:
+- npm init -y         (initialize node repository)
+- add basic server
+- execute "node index.js"
+
+
+# Express.js : is node.js framework
+
+> Website:          https://expressjs.com/
+> Install:          npm install express --save
+> npmjs:            https://www.npmjs.com/package/express
+> Template:         https://expressjs.com/en/starter/hello-world.html
+
+
+# Response Methods:
+- send(): All generic values
+eg.,
+    app.get('/users/custom1', (req, res) => {
+    res.send(USERS.filter(users => users.name.length == 5));
+    })
+
+    app.get('/users/even', (req, res) => {
+    res.send(USERS.filter(users => users.batchNo%2 == 0));
+    })
+
+- json(): return a JSON data
+eg.,
+    app.get('/users', (req, res) => {
+    res.json(USERS);        // displays data in JSON format
+    })
+
+- sendFile(): return a html file
+eg.,
+    app.get("/about", (req, res) => {
+    res.sendFile(__dirname + "/html/about.html");
+    });
+
+- download(): download server assets
+eg.,
+    app.get("/download", (req, res) => {
+    res.download(__dirname + "/assets/samplePdf.pdf");
+    });
+
+- redirect(); force redirect to the related page
+eg.,
+    app.get("/about-us", (req, res) => {
+    res.redirect("/about");
+    });
+
+# HTTP Methods: are API use for communication
+- GET           (Read)
+- POST          (Create)
+- PUT/PATCH     (Update)
+- DELETE        (Delete)
+
+
+# Middleware:       (#Future: Authentication and Authorization)
+
+- use in between client and server
+- A function which has access to request coming from client and response going from the server.
+
+> Client-Server Middleware Diagram: https://miro.medium.com/v2/resize:fit:828/format:webp/1*BuLDBIovfqIwm2swvYid0A.png
+
+
+
+
