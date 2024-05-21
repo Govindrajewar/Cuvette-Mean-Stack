@@ -1,0 +1,22 @@
+# Express:
+Website:    https://expressjs.com/
+
+> Boiler Plate: (index.js)
+
+const express = require('express');
+const app = express();
+const port = 5000;
+
+app.get('/', (req, res) => {
+    res.send("Welcome to my first node server");
+})
+
+app.listen(port, ()=> {
+    console.log('your   server is running in ${port}');
+})
+
+
+> Nodemon:
+Website:    https://www.npmjs.com/package/nodemon
+Command:    npm install -g nodemon (Install globally)
+
