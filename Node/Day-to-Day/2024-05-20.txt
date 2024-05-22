@@ -1,0 +1,84 @@
+# DataBase (db) - Permanent Storage
+
+> Database Architecture:
+Client ----> Server ----> Database
+
+
+> Two Types of database:
+    - SQL: Relational
+        - stored data in table & row format
+        - eg., MySql, SQLite, PostgreSQL, etc.
+
+    - NoSQL: Non-Relational
+        - stored data in binary-json format
+        - Collection & Document format
+       - eg., MongoDB, AWS DynamoDB, etc.
+
+
+# MongoDB:
+Website: https://www.mongodb.com/
+---> signUp
+---> Build a cluster
+---> Select M0 free cluster -> dont change anything
+---> Create Deployment
+
+
+--> select database -> browse collections -> Drop sample_mflix database
+-> Add my own data -> database name(Database1) -> collection name(users) -> create
+
+
+# Mongoose package
+website:        https://mongoosejs.com/
+Link:           https://www.npmjs.com/package/mongoose
+Command:        npm i mongoose
+
+
+-> DataBase ---> connect
+-> database access ---> Add new database user -> add username(abhi) & password(abhi7)-> Build in role(atlas admin)
+
+
+
+> install dotenv package
+Command: npm i dotenv
+
+> create .env file to store URL
+MongoDB_URL = mongodb+srv://abhi:abhi7@cluster0.tyetzyf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+// create dotnet variable and invoke config() method
+const dotenv = require('dotenv');
+dotenv.config();
+
+
+// Put below code in app.listen()
+mongoose
+    .connect(process.env.MongoDB_URL)
+    .then(console.log("DataBase connected successfully"))
+    .catch((error)=> {console.log(error)})
+
+
+// users
+const User = mongoose.model('User', {
+    firstName: String,
+    lastName: String,
+    phoneNumber: Number,
+    isGraduated: Boolean,
+    }
+)
+
+// children
+const Child = mongoose.model('Child', {
+    firstName: String,
+    lastName: String,
+    age: Number,
+    }
+)
+
+// ladies
+const Lady = mongoose.model('Lady', {
+    firstName: String,
+    lastName: String,
+    }
+)
+
+
+---> Database ---> Browse Collection ---> test
