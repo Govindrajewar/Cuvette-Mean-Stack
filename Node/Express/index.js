@@ -9,11 +9,15 @@ const customMiddleware = (req, res, next) => {
   req.customInfo = 20;
   console.log("You enter in Custom middleware");
   next();
-}
-
+};
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  // res.send("Hello World!");
+
+  res.json({
+    status: "SUCCESS",
+    time: new Date(),
+  });
 });
 
 app.get("/me", customMiddleware, (req, res) => {
@@ -26,11 +30,10 @@ app.get("/shop", (req, res) => {
   res.send("Welcome to the shop");
 });
 
-app.get('/users/:username', (req, res) => {
+app.get("/users/:username", (req, res) => {
   console.log(req.params);
   res.send("welcome into users search");
-})
-
+});
 
 app.get("/sendfile", (req, res) => {
   res.sendFile(__dirname + "/index.html");

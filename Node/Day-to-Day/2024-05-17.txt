@@ -1,0 +1,55 @@
+# EJS (Embedded JavaScript Templating) View Engine:
+
+Website: https://ejs.co/
+Install: npm install ejs
+
+
+> render data:
+app.get("/george", (req, res) => {
+  res.render("user", {
+    email: "george.bluth@reqres.in",
+    first_name: "George",
+    last_name: "Bluth",
+    avatar: "https://reqres.in/img/faces/1-image.jpg",
+  });
+});
+
+
+> Format to access variable values:
+Type 1: <%= variable_name %>
+eg.,
+        <h1>
+            <%=first_name%> <%=last_name%>
+        </h1>
+
+
+Type 2: <% if(isPremium) %>
+eg.,
+        <% if (isPremium) { %>
+            <span>Premium User ⭐</span>
+        <% } %>
+
+
+Type 3: Render through the array:
+        <ul>
+            <% hobbies.forEach((hobby)=> { %>
+                <li> <%=hobby%> </li>
+                <% }) %>
+        </ul>
+
+
+# Request parameters/Template engine: variables in URL
+
+format:
+    :username
+Access:
+    req.params.variable_name
+
+
+# Status Code:
+200 - Success (Default)
+404 - Page Not Found
+
+
+
+
