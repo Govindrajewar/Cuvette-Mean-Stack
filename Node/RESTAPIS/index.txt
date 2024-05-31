@@ -1,0 +1,104 @@
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+// needs to create a new document object
+const bodyParser = require("body-parser");
+dotenv.config();
+
+const app = express();
+// needs to create a new document object
+app.use(bodyParser.urlencoded())
+
+const User = mongoose.model("User", {
+  name: String,
+  email: String,
+  phone: Number,
+  password: String,
+  isMinor: Boolean,
+});
+
+app.get("/", (req, res) => {
+  res.send("REST APIs running fine");
+});
+
+
+// GET method: /users
+app.get("/users", async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json({
+      status: "SUCCESS",
+      data: users,
+    });
+  } catch (error) {
+    res.json({
+      status: "ERROR",
+      message: error.message,
+    });
+  }
+});
+
+
+// POST method: /users
+app.post("/users", async (req, res) => {
+    try {
+        // console.log(req.body);
+        const { name, email, password, phone, isMinor } = req.body;
+        await User.create({ name, email, password, phone, isMinor })
+        res.json({
+            status: "SUCCESS",
+            message: "User Created Successfully"
+          });
+    } catch (error) {
+      res.json({
+        status: "ERROR",
+        message: error.message,
+      });
+    }
+  });
+
+
+// PATCH method: /users
+app.patch("/users/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { name, email, password, phone, isMinor } = req.body;
+        await User.findByIdAndUpdate(id, { name, email, password, phone, isMinor })
+        res.json({
+            status: "SUCCESS",
+            message: "User Updated Successfully"
+          });
+    } catch (error) {
+      res.json({
+        status: "ERROR",
+        message: error.message,
+      });
+    }
+  });
+
+
+// DELETE method: /users
+app.delete("/users/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { name, email, password, phone, isMinor } = req.body;
+        await User.findByIdAndDelete(id, { name, email, password, phone, isMinor })
+        res.json({
+            status: "SUCCESS",
+            message: "User Deleted Successfully"
+          });
+    } catch (error) {
+      res.json({
+        status: "ERROR",
+        message: error.message,
+      });
+    }
+  });
+
+
+app.listen(process.env.Port, () => {
+  mongoose
+    .connect(process.env.MongoDB_URL)
+    .then(() => console.log("Server is Successfully Running..."))
+    .catch((err) => console.log(err));
+});

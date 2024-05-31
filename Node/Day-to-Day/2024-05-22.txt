@@ -1,0 +1,277 @@
+# RESTAPI: REpresented State Transfer
+
+> Create RESTAPIs folder
+> npm init -y
+> npm i express ejs mongoose dotenv
+> npm install body-parser
+
+
+# CRUD Operations:
+
+- Create:   POST    /
+- Read  :   GET     /
+- Update:   PATCH   /
+- Delete:   DELETE  /
+
+
+> Sellers:
+    - Create: POST   /sellers
+    - Read:   GET    /sellers
+    - Update: PATCH  /sellers:id
+    - Delete: DELETE /sellers:id
+
+
+> Customers:
+    - Create: POST   /customers
+    - Read:   GET    /customers
+    - Update: PATCH  /customers:id
+    - Delete: DELETE /customers:id
+
+
+> Products:
+    - Create: POST   /products
+    - Read:   GET    /products
+    - Update: PATCH  /products:id
+    - Delete: DELETE /products:id
+
+
+# We use postman tool for POST, PATCH and DELETE
+Website:  https://www.postman.com/
+Download: https://www.postman.com/downloads/
+
+
+# Folder Structure:
+
+- index.js
+> src
+    > controllers
+        - users.js
+    > models
+        - users.js
+    > routes
+        - users.js
+
+### Segregated Code:
+
+# index.js
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
+dotenv.config();
+
+const userRoutes= require('./src/routes/users.js');
+
+const app = express();
+app.use(bodyParser.urlencoded())
+app.use(userRoutes);
+
+app.get("/", (req, res) => {
+  res.send("REST APIs running fine");
+});
+
+app.listen(process.env.Port, () => {
+  mongoose
+    .connect(process.env.MongoDB_URL)
+    .then(() => console.log("Server is Successfully Running..."))
+    .catch((err) => console.log(err));
+});
+
+
+# Models > users.js:
+const mongoose = require("mongoose");
+
+const User = mongoose.model("User", {
+    name: String,
+    email: String,
+    phone: Number,
+    password: String,
+    isMinor: Boolean,
+  });
+
+module.exports = User;
+
+
+# routes > users.js:
+const express = require("express");
+const router = express.Router();
+
+const {
+  getUsers,
+  createUser,
+  updateUser,
+  deleteUser,
+} = require("../controllers/users.js");
+
+router.get("/users", getUsers);
+
+router.post("/users", createUser);
+
+router.patch("/users/:id", updateUser);
+
+router.delete("/users/:id", deleteUser);
+
+module.exports = router
+
+
+# Controllers > users.js:
+const User = require('../models/users.js');
+
+const getUsers = async (req, res) => {
+    try {
+      const users = await User.find();
+      res.json({
+        status: "SUCCESS",
+        data: users,
+      });
+    } catch (error) {
+      res.json({
+        status: "ERROR",
+        message: error.message,
+      });
+    }
+  }
+
+const createUser = async (req, res) => {
+    try {
+
+        const { name, email, password, phone, isMinor } = req.body;
+        await User.create({ name, email, password, phone, isMinor })
+        res.json({
+            status: "SUCCESS",
+            message: "User Created Successfully"
+          });
+    } catch (error) {
+      res.json({
+        status: "ERROR",
+        message: error.message,
+      });
+    }
+  }
+
+const updateUser = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { name, email, password, phone, isMinor } = req.body;
+        await User.findByIdAndUpdate(id, { name, email, password, phone, isMinor })
+        res.json({
+            status: "SUCCESS",
+            message: "User Updated Successfully"
+          });
+    } catch (error) {
+      res.json({
+        status: "ERROR",
+        message: error.message,
+      });
+    }
+  }
+
+const deleteUser = async (req, res) => {
+  try {
+    const { id } = req.params
+    await User.findByIdAndDelete(id)
+    res.json({
+      status: 'SUCCESS',
+      message: 'User deleted successfully'
+    })
+  } catch (error) {
+    res.status(500).json({
+      status: 'FAILED',
+      message: 'Something went wrong'
+    })
+  }
+}
+
+module.exports = {
+  getUsers,
+  createUser,
+  updateUser,
+  deleteUser
+}
+
+# HTTP Methods:
+Link: https://mongoosejs.com/
+
+
+# Method required for Get User:
+Link: https://mongoosejs.com/docs/api/model.html#Model.find()
+eg.,
+    app.get("/users", async (req, res) => {
+    try {
+        const users = await User.find();
+        res.json({
+        status: "SUCCESS",
+        data: users,
+        });
+    } catch (error) {
+        res.json({
+        status: "ERROR",
+        message: error.message,
+        });
+    }
+    });
+
+
+# Method required for Create User:
+Link: https://mongoosejs.com/docs/api/model.html#Model.create()
+eg.,
+    app.post("/users", async (req, res) => {
+        try {
+            // console.log(req.body);
+            const { name, email, password, phone, isMinor } = req.body;
+            await User.create({ name, email, password, phone, isMinor })
+            res.json({
+                status: "SUCCESS",
+                message: "User Created Successfully"
+            });
+        } catch (error) {
+        res.json({
+            status: "ERROR",
+            message: error.message,
+        });
+        }
+    });
+
+
+# Method required for Update User:
+Link: https://mongoosejs.com/docs/api/model.html#Model.findByIdAndUpdate()
+eg.,
+    app.patch("/users/:id", async (req, res) => {
+        try {
+            const { id } = req.params;
+            const { name, email, password, phone, isMinor } = req.body;
+            await User.findByIdAndUpdate(id, { name, email, password, phone, isMinor })
+            res.json({
+                status: "SUCCESS",
+                message: "User Updated Successfully"
+            });
+        } catch (error) {
+        res.json({
+            status: "ERROR",
+            message: error.message,
+        });
+        }
+    });
+
+
+# Method required for Delete User:
+Link: https://mongoosejs.com/docs/api/model.html#Model.findByIdAndDelete()
+eg.,
+
+    app.delete("/users/:id", async (req, res) => {
+        try {
+            const { id } = req.params;
+            const { name, email, password, phone, isMinor } = req.body;
+            await User.findByIdAndDelete(id, { name, email, password, phone, isMinor })
+            res.json({
+                status: "SUCCESS",
+                message: "User Deleted Successfully"
+            });
+        } catch (error) {
+        res.json({
+            status: "ERROR",
+            message: error.message,
+        });
+        }
+    });
+
