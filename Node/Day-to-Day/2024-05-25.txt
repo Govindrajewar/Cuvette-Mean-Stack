@@ -1,0 +1,29 @@
+# Deployment: (Migrate to cloud database)
+
+> We use MongoDB Atlas as database:
+
+const MongoDB_Link = mongodb+srv://admin:12345@cuvetteapicluster.fincejh.mongodb.net/?retryWrites=true&w=majority&appName=CuvetteAPICluster
+
+mongoose.connect('MongoDB_Link')
+
+
+# To maintain privacy:
+- create a .env file and move MongoDB_Link in it
+
+- install dotenv package
+- const dotenv = require('dotenv')
+- dotenv.config();
+
+- replace mongoose.connect(process.env.MongoDB_Link)
+
+> Add .env into .gitignore
+
+
+# for PORT:
+
+const PORT = process.env.PORT || 3000;
+
+
+> We use render.com for hosting
+website: https://render.com/
+
