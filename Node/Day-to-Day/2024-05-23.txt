@@ -1,0 +1,6 @@
+# APIs:
+
+Links:
+- https://cloud.mongodb.com/
+- https://mongoosejs.com/docs/api/mongoose.html
+- https://mongoosejs.com/docs/api/model.html
