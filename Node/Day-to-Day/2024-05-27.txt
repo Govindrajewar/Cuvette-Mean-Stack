@@ -1,0 +1,16 @@
+Refer:
+- https://cloud.mongodb.com/v2/664d7fadcc3d6e07b4d96519#/overview
+
+> React Bootstrap:
+- https://react-bootstrap.netlify.app/docs/getting-started/introduction/
+- https://react-bootstrap.netlify.app/docs/components/buttons/
+- https://react-bootstrap.netlify.app/docs/components/cards/
+- https://react-bootstrap.netlify.app/docs/layout/grid
+- https://react-bootstrap.netlify.app/docs/components/toasts/#basic
+- https://react-bootstrap.netlify.app/docs/components/modal
+-
+> Tailwind CSS:
+- https://tailwindcss.com/
+-
+> Packages required:
+- https://www.npmjs.com/package/cors
