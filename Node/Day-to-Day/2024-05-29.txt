@@ -1,0 +1,39 @@
+  # Authentication vs Authorization
+    - Authentication: Who are you?
+    - Authorization: What access do you have?
+
+    - Private Route
+      - Can be accessed only by logged in users (Authentication)
+      - Can be accessed only by authorized users (Authorization)
+        - Admin Dashboard
+        - Premium Content
+
+# Encryption/Decryption
+- Encryption: Original Password -> Encrypted Password
+- Decryption: Encrypted Password -> Original Password
+
+- Eg:
+    - Encryption Rule: N+3
+    - Original Password: meet123r
+    - Encrypted Password: phhw456u
+    - Decryption Rule: N-3
+    - Encrypted Password: phhw456u
+    - Original Password: meet123r
+
+# Packages:
+- bcrypt
+    > bcrypt Package to encrypted/decrypt password
+    Package: https://www.npmjs.com/package/bcrypt
+    Command: npm i bcrypt
+- jsonwebtoken
+    > JWT (Json Web Token)
+    Package: https://www.npmjs.com/package/jsonwebtoken
+    Command: npm i jsonwebtoken
+
+# Resources
+- https://blog.logrocket.com/using-axios-set-request-headers/
+
+
+> mongoose function 'findOne()' returns only one object rather like find() returns array of object
+findOne() : https://mongoosejs.com/docs/api/model.html#Model.findOne()
+
