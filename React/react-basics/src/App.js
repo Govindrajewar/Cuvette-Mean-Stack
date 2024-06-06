@@ -11,20 +11,18 @@ function App() {
     <div className="App">
 
     {/* 01-04-2024 */}
-    {/* <Parent /> */}
-    {/* <Hooks /> */}
+    <Parent />
+    <Hooks />
     <Assignment1 />
 
     {/* 28-03-2024 */}
-      {/* <h1>First React App</h1>
-      <p>Hello, I am learning React.</p> */}
+      <h1>First React App</h1>
+      <p>Hello, I am learning React.</p>
 
-      {/* <FirstSection></FirstSection> */}
+      <FirstSection></FirstSection>
 
       {/* Fragments */}
-      {/* <StudentDetails></StudentDetails> */}
-
-
+      <StudentDetails></StudentDetails>
 
     </div>
   );

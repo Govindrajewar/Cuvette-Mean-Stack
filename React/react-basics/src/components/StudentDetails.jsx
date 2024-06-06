@@ -66,7 +66,7 @@ function StudentDetails() {
 
                 {/* Rendering List */}
                 <h3 style={{fontStyle: 'italic'}}>Hobbies:</h3>
-                <ul>
+                <ul type='none'>
                     {
                         studentDetails.hobbies.map( (hobby, index) => (
                             <li key={index}>{hobby}</li>
