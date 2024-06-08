@@ -44,4 +44,29 @@ router.post('/register', async (req, res) => {
 
 })
 
+
+// login
+router.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+    const user = User.findOne({ email })
+
+    try {
+        if (user) {
+            res.status(200).json({
+                message: 'Login successful'
+            });
+        } else {
+            res.status(404).json({
+                message: 'User not found'
+            });
+        }
+
+    } catch (error) {
+        res.status(500).json({
+            message: 'Internal Server Error',
+            error,
+        });
+    }
+})
+
 module.exports = router
