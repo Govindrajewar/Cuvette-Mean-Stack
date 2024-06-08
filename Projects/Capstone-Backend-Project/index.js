@@ -1,12 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-dotenv.config();
-
+const dotenv = require("dotenv").config();
 const userRoute = require("./routes/userRoute")
+
 
 const app = express();
 app.use(express.json());
+
 
 
 mongoose
@@ -17,12 +17,12 @@ mongoose
   app.use('/user', userRoute);
 
 
-// app.get("/", (req, res) => {
-//   res.json({
-//     message: "Server is live",
-//     date: new Date().toLocaleDateString(),
-//   });
-// });
+app.get("/", (req, res) => {
+  res.json({
+    message: "Server is live",
+    date: new Date()
+  });
+});
 
 app.get("/health", (req, res) => {
   res.json({
