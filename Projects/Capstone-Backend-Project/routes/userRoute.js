@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../model/User.js");
 const bcrypt = require('bcrypt');
+var jwt = require('jsonwebtoken');
 
 // post, get, put, delete
 
@@ -63,9 +64,22 @@ router.post("/login", async (req, res) => {
     if (existingUser) {
     const isValidPassword = await bcrypt.compare(password, existingUser.password);
       if (isValidPassword) {
+
+        const token = jwt.sign(
+            // 1. payload
+            { email: existingUser.email,
+              name: existingUser.name,
+            },
+            // 2. secret key
+            'secretkey',
+            // 3. optional argument to make token temporary
+            { expiresIn: '1h' }
+        )
+
         res.status(200).json({
           message: "Login is successful",
           user: existingUser.email,
+          token: token,
         });
       } else {
         res.status(400).json({
