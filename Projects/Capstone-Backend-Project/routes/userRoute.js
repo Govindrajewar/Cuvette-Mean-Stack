@@ -3,6 +3,7 @@ const router = express.Router();
 const User = require("../model/User.js");
 const bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
+const validateNewUser = require('../middleware/validateNewUser.js')
 
 // post, get, put, delete
 
@@ -18,7 +19,7 @@ router.get("/", async (req, res) => {
 
 // register
 // TODO: Create a validation middleware
-router.post("/register", async (req, res) => {
+router.post("/register", validateNewUser, async (req, res) => {
 
   try {
 

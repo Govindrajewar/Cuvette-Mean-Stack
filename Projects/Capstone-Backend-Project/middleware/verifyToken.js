@@ -15,7 +15,7 @@ const verifyToken = (req, res, next) => {
         next()
 
     } catch (error) {
-        res.status(500).send('Access Denied')
+        res.status(500).send('Access Denied at Verify Token')
     }
 
 }

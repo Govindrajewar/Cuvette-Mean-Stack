@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Job = require("../model/Job");
+const validateNewJob = require("../middleware/validateNewJob");
 
 
 router.get('/', async (req, res) => {
@@ -21,7 +22,7 @@ location, job description, about company,
 skills required, additional information
 -> author
 */
-router.post('/add', async (req, res) => {
+router.post('/add', validateNewJob, async (req, res) => {
     const { companyName, logoUrl, jobPosition, monthlySalary, jobType, remote, location, jobDescription, aboutCompany, skillsRequired, additionalInfo, author } = req.body;
 
     const newJob = new Job({
