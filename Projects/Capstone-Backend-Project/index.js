@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const userRoute = require("./routes/userRoute")
 const jobRoute = require("./routes/jobRoute")
+const verifyToken = require('./middleware/verifyToken')
 
 
 const app = express();
 app.use(express.json());
-
 
 
 mongoose
@@ -16,7 +16,7 @@ mongoose
   .catch((error) => console.log(error));
 
   app.use('/user', userRoute);
-  app.use('/job', jobRoute);
+  app.use('/job', verifyToken, jobRoute);
 
 
 app.get("/", (req, res) => {
