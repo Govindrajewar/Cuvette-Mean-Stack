@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const userRoute = require("./routes/userRoute")
+const jobRoute = require("./routes/jobRoute")
 
 
 const app = express();
@@ -15,6 +16,7 @@ mongoose
   .catch((error) => console.log(error));
 
   app.use('/user', userRoute);
+  app.use('/job', jobRoute);
 
 
 app.get("/", (req, res) => {
