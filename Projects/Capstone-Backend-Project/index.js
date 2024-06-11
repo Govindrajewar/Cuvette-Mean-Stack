@@ -26,6 +26,14 @@ app.get("/", (req, res) => {
   });
 });
 
+
+app.get('*', (req, res) => {
+  res.status(404).json({
+    message: "Page Not Found",
+    date: new Date()
+  });
+})
+
 app.get("/health", (req, res) => {
   res.json({
     message: "Job listing API",

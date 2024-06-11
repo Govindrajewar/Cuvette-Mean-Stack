@@ -15,26 +15,32 @@ router.get('/', async (req, res) => {
     })
 })
 
-/*
-compony name, logo url, job position/title,
-monthly salary, job type, remote,
-location, job description, about company,
-skills required, additional information
--> author
-*/
-router.post('/add', validateNewJob, async (req, res) => {
-    const { companyName, logoUrl, jobPosition, monthlySalary, jobType, remote, location, jobDescription, aboutCompany, skillsRequired, additionalInfo, author } = req.body;
+    /*
+    compony name, logo url, job position/title,
+    monthly salary, job type, remote,
+    location, job description, about company,
+    skills required, additional information
+    -> author
+    */
+    router.post('/add', validateNewJob, async (req, res) => {
+        try {
+        const { companyName, logoUrl, jobPosition, monthlySalary, jobType, remote, location, jobDescription, aboutCompany, skillsRequired, additionalInfo, author } = req.body;
 
-    const newJob = new Job({
-        companyName, logoUrl, jobPosition, monthlySalary, jobType, remote, location, jobDescription, aboutCompany, skillsRequired, additionalInfo, author
-    })
+        const newJob = new Job({
+            companyName, logoUrl, jobPosition, monthlySalary, jobType, remote, location, jobDescription, aboutCompany, skillsRequired, additionalInfo, author
+        })
 
-    await newJob.save()
+        await newJob.save()
 
-    res.json({
-        message: 'Job added successfully',
-        jobId: newJob._id
-    })
+        res.json({
+            message: 'Job added successfully',
+            jobId: newJob._id
+        })
+    } catch (error) {
+        res.status(500).json({
+            message: 'Internal Server Error',
+        })
+    }
 })
 
 
