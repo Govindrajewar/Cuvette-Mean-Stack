@@ -2,7 +2,7 @@ const  validateNewUser = ( req, res, next ) => {
     const { name, email, password } = req.body;
     if (!name ||!email ||!password) {
         return res.status(400).json({
-            message: "Please provide all fields"
+            message: "Please provide all fields name, email and password",
         })
     }
 
