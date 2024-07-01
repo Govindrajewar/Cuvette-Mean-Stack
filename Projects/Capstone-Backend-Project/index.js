@@ -4,9 +4,11 @@ const dotenv = require("dotenv").config();
 const userRoute = require("./routes/userRoute")
 const jobRoute = require("./routes/jobRoute")
 const verifyToken = require('./middleware/verifyToken')
+const cors = require('cors');
 
 
 const app = express();
+app.use(cors())
 app.use(express.json());
 
 
