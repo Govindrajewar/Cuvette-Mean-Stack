@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { fetchJobs } from "../api/job.js";
 
 function HomePage() {
-
   const styles = {
     table: {
       width: "100%",
@@ -19,9 +18,7 @@ function HomePage() {
       textalign: "left",
       borderBottom: "1px solid #ddd",
     },
-  }
-
-
+  };
 
   const [jobs, setJobs] = useState([]);
 
@@ -47,23 +44,23 @@ function HomePage() {
   return (
     <div>
       Homepage
-
-    <table style={styles.table}>
-      <tr>
-      <th style={styles.th}>Company Name</th>
-      <th style={styles.th}>Job Position</th>
-      <th style={styles.th}>Job Location</th>
-      </tr>
-
-      {jobs.map((job, index) => (
-        <tr key={index}>
-          <td style={styles.td}>{job.companyName}</td>
-          <td style={styles.td}>{job.jobPosition}</td>
-          <td style={styles.td}>{job.location}</td>
+      <table style={styles.table}>
+        <tr>
+          <th style={styles.th}>Company Name</th>
+          <th style={styles.th}>Job Position</th>
+          <th style={styles.th}>Job Location</th>
+          <th style={styles.th}>Skills Required</th>
         </tr>
-      ))}
-    </table>
 
+        {jobs.map((job, index) => (
+          <tr key={index}>
+            <td style={styles.td}>{job.companyName}</td>
+            <td style={styles.td}>{job.jobPosition}</td>
+            <td style={styles.td}>{job.location}</td>
+            <td style={styles.td}>{job.skillsRequired}</td>
+          </tr>
+        ))}
+      </table>
     </div>
   );
 }
