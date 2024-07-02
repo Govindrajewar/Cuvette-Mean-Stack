@@ -1,18 +1,21 @@
 import { useState } from "react";
 import { Register } from "../api/user";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showLoginRedirect, setShowLoginRedirect] = useState(false);
+  const navigate = useNavigate();
 
   const handleRegister = async () => {
     try {
       const response = await Register(name, email, password);
 
       if (response) {
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
         setShowLoginRedirect(true);
       }
     } catch (error) {
@@ -48,7 +51,8 @@ function RegisterPage() {
         Register
       </button>
 
-      {showLoginRedirect && <Navigate to="/login" />}
+      {showLoginRedirect &&
+        navigate("/login")}
     </div>
   );
 }
