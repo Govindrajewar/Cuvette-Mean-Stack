@@ -18,7 +18,7 @@ mongoose
   .catch((error) => console.log(error));
 
   app.use('/user', userRoute);
-  app.use('/job', verifyToken, jobRoute);
+  app.use('/job', jobRoute);
 
 
 app.get("/", (req, res) => {
